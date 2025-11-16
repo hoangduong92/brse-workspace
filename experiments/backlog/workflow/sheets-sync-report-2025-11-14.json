@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-11-14T08:23:35.993Z",
+  "mode": "dry-run",
+  "summary": {
+    "total": 3,
+    "added": 0,
+    "updated": 1,
+    "skipped": 2,
+    "failed": 0
+  },
+  "results": [
+    {
+      "issueKey": "HB21373-399",
+      "summary": "Điều tra issue duplicate import vào V-ONE -- V-ONE2重インポートの原因調査",
+      "action": "skipped",
+      "row": 90
+    },
+    {
+      "issueKey": "HB21373-397",
+      "summary": "Tạm dừng một phần flow quản lý và báo cáo dòng tiền -- COE-181【経財部001】経財部001_資金繰り管理・報告の一部フローの停止",
+      "action": "skipped",
+      "row": 88
+    },
+    {
+      "issueKey": "HB21373-394",
+      "summary": "Monitoring RPA 2025/11 -- 2025/11 RPA監視",
+      "action": "updated",
+      "row": 33
+    }
+  ]
+}

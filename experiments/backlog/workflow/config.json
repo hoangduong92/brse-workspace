@@ -1,0 +1,20 @@
+{
+  "backlog": {
+    "projectId": 47358,
+    "projectKey": "HB21373"
+  },
+  "filters": {
+    "statusId": [1, 2, 3],
+    "createdSince": "2025-10-01",
+    "count": 100
+  },
+  "translation": {
+    "format": "VN/EN -- JP",
+    "enableCache": true
+  },
+  "execution": {
+    "dryRun": false,
+    "delayBetweenUpdates": 200,
+    "testWithOneIssue": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(test:*)",
+      "Bash(cat:*)",
+      "mcp__backlog__get_issues",
+      "Bash(npm start)",
+      "mcp__backlog__get_issue_types",
+      "mcp__backlog__get_project",
+      "mcp__backlog__count_issues",
+      "Bash(npm install)",
+      "mcp__backlog__get_project_list",
+      "Bash(npx tsx:*)",
+      "Bash(npm install:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run test:coverage:*)",
+      "Bash(chmod:*)",
+      "Bash(docker-compose up:*)",
+      "Bash(docker-compose ps:*)",
+      "Bash(docker-compose logs:*)",
+      "Bash(docker-compose restart:*)",
+      "Bash(npm run test:monitoring:health:*)",
+      "mcp__backlog__get_categories",
+      "mcp__backlog__get_space",
+      "Bash(find:*)",
+      "Bash(env)",
+      "Bash(node --loader tsx:*)",
+      "Bash(./node_modules/.bin/tsx:*)",
+      "Bash(npm run sheets:sync:dry:*)",
+      "Bash(npm run sheets:auto:dry:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

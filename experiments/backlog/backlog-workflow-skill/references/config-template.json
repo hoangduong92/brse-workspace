@@ -1,0 +1,46 @@
+{
+  "__README__": "This is a template. Copy this to workflow/user-config.json and fill in your values.",
+  "__INSTRUCTIONS__": "During first use, Claude will ask for these values and create user-config.json automatically.",
+
+  "backlog": {
+    "projectId": "<YOUR_PROJECT_ID>",
+    "projectKey": "<YOUR_PROJECT_KEY>",
+    "__HELP__": "Find these in your Backlog project URL or by listing projects with MCP tools"
+  },
+
+  "googleSheets": {
+    "spreadsheetId": "<YOUR_SPREADSHEET_ID>",
+    "sheetName": "<YOUR_SHEET_NAME>",
+    "range": "E5:E100",
+    "__HELP__": "Optional: Only needed if you want to sync with Google Sheets"
+  },
+
+  "translation": {
+    "languagePair": "vi-ja",
+    "__OPTIONS__": ["vi-ja", "en-ja", "custom"],
+    "format": "VN/EN -- JP",
+    "enableCache": true,
+    "customDictionary": {},
+    "__HELP__": "Choose language pair based on your team's languages"
+  },
+
+  "execution": {
+    "dryRun": false,
+    "delayBetweenUpdates": 200,
+    "testWithOneIssue": false,
+    "__HELP__": "Runtime settings - usually don't need to change these"
+  },
+
+  "filters": {
+    "statusId": [1, 2, 3],
+    "__STATUS_MAP__": {
+      "1": "Open",
+      "2": "In Progress",
+      "3": "Resolved",
+      "4": "Closed"
+    },
+    "createdSince": "2025-10-01",
+    "count": 100,
+    "__HELP__": "Filter which issues to process"
+  }
+}

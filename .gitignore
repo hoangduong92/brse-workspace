@@ -1,0 +1,53 @@
+# Build artifacts
+uigen.zip
+dist/
+build/
+*.log
+
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+
+# Google Cloud / Service Account credentials
+*-credentials.json
+*-service-account.json
+*gcp*.json
+*ggsheet*.json
+google-credentials.json
+service-account-key.json
+
+# API Keys and Secrets
+*-api-key*.json
+*secret*.json
+*.pem
+*.key
+*.p12
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+node_modules/
+
+# Test coverage
+coverage/
+
+# Temporary files
+*.tmp
+tmp/
+
+# Backlog Workflow SKILL - User-specific files (DO NOT COMMIT)
+workflow/user-config.json
+workflow/translation-cache*.json
+workflow/*-report-*.json
+workflow/sheets-sync-report-*.json
+workflow/sheets-auto-sync-report-*.json
+workflow/sync-report-*.json

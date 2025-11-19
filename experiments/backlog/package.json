@@ -19,7 +19,8 @@
     "sheets:sync:dry": "tsx workflow/backlog-to-sheets.ts --dry-run",
     "sheets:sync:test": "tsx workflow/backlog-to-sheets.ts --test",
     "sheets:auto": "tsx workflow/backlog-to-sheets-auto.ts",
-    "sheets:auto:dry": "tsx workflow/backlog-to-sheets-auto.ts --dry-run"
+    "sheets:auto:dry": "tsx workflow/backlog-to-sheets-auto.ts --dry-run",
+    "issue:init": "tsx workflow/issue-init.ts"
   },
   "dependencies": {
     "@types/node": "^20.11.5",

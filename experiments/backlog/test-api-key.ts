@@ -34,7 +34,7 @@ async function testGetProject() {
 
 // Test 2: Get issue info (read-only)
 async function testGetIssue() {
-  const url = `https://${domain}/api/v2/issues/HB21373-394?apiKey=${apiKey}`;
+  const url = `https://${domain}/api/v2/issues/HB21373-411?apiKey=${apiKey}`;
 
   try {
     console.log('🔍 Test 2: Fetching issue info (read-only)...');
@@ -48,7 +48,38 @@ async function testGetIssue() {
     }
 
     const issue = await response.json();
-    console.log(`✅ Success! Issue: ${issue.issueKey} - ${issue.summary}\n`);
+    console.log(`✅ Success! Issue: ${issue.issueKey} - ${issue.summary}`);
+    console.log('\n═══════════════════════════════════════════════════');
+    console.log(`📋 Issue Details: ${issue.issueKey}`);
+    console.log('═══════════════════════════════════════════════════');
+    console.log(`\n📌 Summary:\n   ${issue.summary}`);
+    console.log(`\n📝 Description:\n   ${issue.description || '(No description)'}`);
+    console.log(`\n📊 Status: ${issue.status?.name || 'N/A'}`);
+    console.log(`⚡ Priority: ${issue.priority?.name || 'N/A'}`);
+    console.log(`🏷️  Issue Type: ${issue.issueType?.name || 'N/A'}`);
+
+    if (issue.assignee) {
+      console.log(`👤 Assignee: ${issue.assignee.name}`);
+    } else {
+      console.log(`👤 Assignee: (Unassigned)`);
+    }
+
+    console.log(`\n📅 Created: ${new Date(issue.created).toLocaleString()}`);
+    console.log(`📅 Updated: ${new Date(issue.updated).toLocaleString()}`);
+
+    if (issue.dueDate) {
+      console.log(`⏰ Due Date: ${issue.dueDate}`);
+    }
+
+    if (issue.category && issue.category.length > 0) {
+      console.log(`\n🏷️  Categories: ${issue.category.map((c: any) => c.name).join(', ')}`);
+    }
+
+    if (issue.milestone && issue.milestone.length > 0) {
+      console.log(`🎯 Milestones: ${issue.milestone.map((m: any) => m.name).join(', ')}`);
+    }
+
+    console.log('\n═══════════════════════════════════════════════════\n');
     return true;
 
   } catch (error) {

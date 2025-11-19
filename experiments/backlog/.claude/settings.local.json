@@ -27,7 +27,8 @@
       "Bash(node --loader tsx:*)",
       "Bash(./node_modules/.bin/tsx:*)",
       "Bash(npm run sheets:sync:dry:*)",
-      "Bash(npm run sheets:auto:dry:*)"
+      "Bash(npm run sheets:auto:dry:*)",
+      "Bash(npm run issue:init:*)"
     ],
     "deny": [],
     "ask": []

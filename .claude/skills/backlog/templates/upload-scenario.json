@@ -1,0 +1,9 @@
+{
+  "name": "Upload Scenario",
+  "summary_template": "[Scenario] {translated_summary}",
+  "description_template": "## Test Scenario\n\n**Original:** {original_summary}\n\n**Translated:** {translated_summary}\n\n---\n\n## Details\n\n{original_description}\n\n---\n\n## Translation\n\n{translated_description}\n\n---\n\n**Source Ticket:** {source_ticket_id}",
+  "subtasks": [],
+  "default_assignee": null,
+  "default_priority": "high",
+  "assignee_mapping": {}
+}

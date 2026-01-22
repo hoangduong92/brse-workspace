@@ -1,0 +1,9 @@
+{
+  "name": "Investigate Issue",
+  "summary_template": "[Investigate] {translated_summary}",
+  "description_template": "## Issue Report\n\n**Original:** {original_summary}\n\n**Translated:** {translated_summary}\n\n---\n\n## Problem Description\n\n{original_description}\n\n---\n\n## Translation\n\n{translated_description}\n\n---\n\n## Investigation Notes\n\n_To be filled during investigation_\n\n- [ ] Root cause identified\n- [ ] Solution proposed\n- [ ] Fix implemented\n- [ ] Verified in staging\n\n---\n\n**Source Ticket:** {source_ticket_id}",
+  "subtasks": [],
+  "default_assignee": null,
+  "default_priority": "urgent",
+  "assignee_mapping": {}
+}

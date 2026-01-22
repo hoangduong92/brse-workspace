@@ -1,0 +1,34 @@
+{
+  "name": "Feature Development",
+  "summary_template": "[KH-{project_id}] {translated_summary}",
+  "description_template": "## Original (Source)\n\n**Summary:** {original_summary}\n\n{original_description}\n\n---\n\n## Translation (Target)\n\n**Summary:** {translated_summary}\n\n{translated_description}\n\n---\n\n**Source Ticket:** {source_ticket_id}",
+  "subtasks": [
+    {
+      "subject_template": "[Analysis] {translated_summary}",
+      "estimated_hours": 2.0,
+      "default_assignee": null,
+      "assignee_key": "analysis"
+    },
+    {
+      "subject_template": "[Implementation] {translated_summary}",
+      "estimated_hours": 8.0,
+      "default_assignee": null,
+      "assignee_key": "implementation"
+    },
+    {
+      "subject_template": "[Testing] {translated_summary}",
+      "estimated_hours": 4.0,
+      "default_assignee": null,
+      "assignee_key": "testing"
+    },
+    {
+      "subject_template": "[Code Review] {translated_summary}",
+      "estimated_hours": 2.0,
+      "default_assignee": null,
+      "assignee_key": "code_review"
+    }
+  ],
+  "default_assignee": null,
+  "default_priority": "normal",
+  "assignee_mapping": {}
+}

@@ -1,31 +1,58 @@
 {
-  "name": "Feature Development",
-  "summary_template": "[KH-{project_id}] {translated_summary}",
+  "name": "RPA Feature Development",
+  "issue_type": "NewFeature",
+  "summary_template": "{translated_summary}",
   "description_template": "## Original (Source)\n\n**Summary:** {original_summary}\n\n{original_description}\n\n---\n\n## Translation (Target)\n\n**Summary:** {translated_summary}\n\n{translated_description}\n\n---\n\n**Source Ticket:** {source_ticket_id}",
   "subtasks": [
     {
-      "subject_template": "[Analysis] {translated_summary}",
+      "subject_template": "RPA/要件定義/ヒアリング -- Hearing",
       "estimated_hours": 2.0,
-      "default_assignee": null,
-      "assignee_key": "analysis"
+      "assignee_key": "hearing"
     },
     {
-      "subject_template": "[Implementation] {translated_summary}",
-      "estimated_hours": 8.0,
-      "default_assignee": null,
-      "assignee_key": "implementation"
-    },
-    {
-      "subject_template": "[Testing] {translated_summary}",
+      "subject_template": "RPA/要件定義/要件定義書作成 -- Tạo file spec",
       "estimated_hours": 4.0,
-      "default_assignee": null,
+      "assignee_key": "spec_creation"
+    },
+    {
+      "subject_template": "RPA/要件定義書/要件定義書レビュー -- Review file spec",
+      "estimated_hours": 2.0,
+      "assignee_key": "spec_review"
+    },
+    {
+      "subject_template": "RPA/開発/開発 -- Coding",
+      "estimated_hours": 8.0,
+      "assignee_key": "coding"
+    },
+    {
+      "subject_template": "RPA/開発/開発環境テストケース作成 -- Tạo test case",
+      "estimated_hours": 2.0,
+      "assignee_key": "test_case"
+    },
+    {
+      "subject_template": "RPA/開発/開発環境テスト -- Thực thi test",
+      "estimated_hours": 4.0,
       "assignee_key": "testing"
     },
     {
-      "subject_template": "[Code Review] {translated_summary}",
+      "subject_template": "RPA/開発/テスト後の修正 -- Fix bug khi test",
+      "estimated_hours": 4.0,
+      "assignee_key": "bug_fix"
+    },
+    {
+      "subject_template": "RPA/開発/UAT -- UAT",
+      "estimated_hours": 4.0,
+      "assignee_key": "uat"
+    },
+    {
+      "subject_template": "RPA/リリース判定/マニュアル作成 -- Làm user manual",
       "estimated_hours": 2.0,
-      "default_assignee": null,
-      "assignee_key": "code_review"
+      "assignee_key": "manual"
+    },
+    {
+      "subject_template": "RPA/リリース判定/リリース判定 -- Release",
+      "estimated_hours": 1.0,
+      "assignee_key": "release"
     }
   ],
   "default_assignee": null,

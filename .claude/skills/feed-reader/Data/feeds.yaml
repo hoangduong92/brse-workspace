@@ -1,0 +1,52 @@
+# FeedReader - URL List Template
+#
+# Copy this file to ~/.claude/skills/FeedReader/feeds.yaml
+# and customize with your own URLs.
+#
+# Categories: blog, twitter, newsletter, youtube
+# Priority: high (always process), medium (normal), low (skip if busy)
+
+feeds:
+  # === BLOGS ===
+  - url: "https://simonwillison.net/"
+    name: "Simon Willison"
+    category: blog
+    priority: high
+    notes: "AI/LLM insights, Django creator"
+
+  - url: "https://www.paulgraham.com/articles.html"
+    name: "Paul Graham Essays"
+    category: blog
+    priority: high
+    notes: "Startup wisdom, essays on life"
+
+  # === TWITTER/X ===
+  # Note: Twitter requires Tier 3 (Browser) or Tier 4 (Bright Data)
+  - url: "https://twitter.com/karpathy"
+    name: "Andrej Karpathy"
+    category: twitter
+    priority: high
+    notes: "AI research, Tesla AI lead"
+
+  # === NEWSLETTERS ===
+  - url: "https://newsletter.pragmaticengineer.com/"
+    name: "Pragmatic Engineer"
+    category: newsletter
+    priority: medium
+    notes: "Software engineering insights"
+
+  # === YOUTUBE ===
+  # Note: For YouTube, we extract recent video titles/descriptions
+  - url: "https://www.youtube.com/@lexfridman"
+    name: "Lex Fridman Podcast"
+    category: youtube
+    priority: low
+    notes: "Long-form interviews"
+
+# === ADD YOUR FEEDS BELOW ===
+# Template:
+#   - url: "https://..."
+#     name: "Display Name"
+#     category: blog|twitter|newsletter|youtube
+#     priority: high|medium|low
+#     notes: "Optional notes"

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+:root {
+  /* Primary - Trust Blue */
+  --primary: #2563EB;
+  --primary-light: #3B82F6;
+  --primary-dark: #1D4ED8;
+
+  /* Secondary */
+  --secondary: #64748B;
+  --secondary-light: #94A3B8;
+
+  /* CTA/Accent */
+  --cta: #F97316;
+  --cta-hover: #EA580C;
+
+  /* Background */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --bg-tertiary: #F1F5F9;
+
+  /* Text */
+  --text-primary: #1E293B;
+  --text-secondary: #475569;
+  --text-muted: #64748B;
+
+  /* Border */
+  --border: #E2E8F0;
+  --border-focus: #2563EB;
+
+  /* Status Colors */
+  --status-open: #6B7280;
+  --status-in-progress: #2563EB;
+  --status-resolved: #16A34A;
+  --status-closed: #9CA3AF;
+
+  /* Issue Type Colors */
+  --type-bug: #DC2626;
+  --type-feature: #7C3AED;
+  --type-task: #0891B2;
+  --type-improvement: #059669;
+}
+
+* {
+  border-color: var(--border);
+}
+
+body {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

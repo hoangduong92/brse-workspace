@@ -1,7 +1,7 @@
 ---
 title: "bk-status Skill Implementation"
 description: "Check project progress: late tasks, overloaded members, health summary"
-status: in_progress
+status: completed
 priority: P0
 effort: 4h
 branch: main
@@ -29,7 +29,7 @@ parent: plans/260128-0933-brsekit-mvp-implementation/plan.md
 | [Phase 1](./phase-01-extend-backlog-client.md) | Create bk-status/client.py with list_issues, get_users, get_statuses | 1h | ✅ DONE |
 | [Phase 2](./phase-02-tdd-test-fixtures.md) | Create test fixtures & TDD test cases | 1h | ✅ DONE |
 | [Phase 3](./phase-03-status-analyzer.md) | Implement core analysis logic | 1.5h | ✅ DONE |
-| [Phase 4](./phase-04-skill-structure.md) | Create SKILL.md, command integration | 0.5h | pending |
+| [Phase 4](./phase-04-skill-structure.md) | Create SKILL.md, command integration | 0.5h | ✅ DONE |
 
 ---
 

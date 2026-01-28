@@ -5,7 +5,11 @@ import logging
 import requests
 from typing import Optional
 
-from .models import Issue, User, Status, Project
+# Support both relative and absolute imports
+try:
+    from .models import Issue, User, Status, Project
+except ImportError:
+    from models import Issue, User, Status, Project
 
 logger = logging.getLogger(__name__)
 

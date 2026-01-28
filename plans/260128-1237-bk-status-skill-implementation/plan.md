@@ -27,8 +27,8 @@ parent: plans/260128-0933-brsekit-mvp-implementation/plan.md
 | Phase | Description | Effort | Status |
 |-------|-------------|--------|--------|
 | [Phase 1](./phase-01-extend-backlog-client.md) | Create bk-status/client.py with list_issues, get_users, get_statuses | 1h | ✅ DONE |
-| [Phase 2](./phase-02-tdd-test-fixtures.md) | Create test fixtures & TDD test cases | 1h | pending |
-| [Phase 3](./phase-03-status-analyzer.md) | Implement core analysis logic | 1.5h | pending |
+| [Phase 2](./phase-02-tdd-test-fixtures.md) | Create test fixtures & TDD test cases | 1h | ✅ DONE |
+| [Phase 3](./phase-03-status-analyzer.md) | Implement core analysis logic | 1.5h | ✅ DONE |
 | [Phase 4](./phase-04-skill-structure.md) | Create SKILL.md, command integration | 0.5h | pending |
 
 ---
@@ -69,10 +69,10 @@ parent: plans/260128-0933-brsekit-mvp-implementation/plan.md
 ## Success Criteria
 
 - [x] `list_issues()` fetches all issues with pagination
-- [ ] Late tasks identified correctly (due < today, status active)
-- [ ] Workload calculated per assignee
-- [ ] Markdown report generated with tables
-- [ ] All TDD tests pass
+- [x] Late tasks identified correctly (due < today, status active)
+- [x] Workload calculated per assignee
+- [x] Markdown report generated with tables
+- [x] All TDD tests pass (29/29)
 
 ---
 
@@ -81,6 +81,49 @@ parent: plans/260128-0933-brsekit-mvp-implementation/plan.md
 - Existing `nulab_client.py` with rate limiting, error handling
 - Existing `models.py` dataclasses
 - Test Backlog project access
+
+---
+
+## Skill Best Practices (from skill-creator)
+
+Reference: [skill-creator SKILL.md](../../.claude/skills/skill-creator/SKILL.md)
+
+### Requirements Checklist
+
+| Requirement | Target | Current Status |
+|-------------|--------|----------------|
+| SKILL.md size | <100 lines | ✅ 85 lines |
+| Description | <200 chars | ✅ ~95 chars |
+| Scripts have tests | Required | ✅ tests/ exists |
+| .env hierarchy | Required | ✅ Implemented |
+| Python over Bash | Preferred | ✅ All Python |
+| Progressive disclosure | Principle | ✅ Modular scripts |
+
+### .env Hierarchy (MUST follow)
+
+Order: `process.env` > `.claude/skills/bk-status/.env` > `.claude/skills/.env` > `.claude/.env`
+
+### Writing Style
+
+- Use **imperative/infinitive form** (verb-first)
+- Objective, instructional language
+- Example: "To fetch issues, run..." NOT "You should run..."
+
+### File Organization
+
+- **scripts/**: Executable code with tests
+- **references/**: Reference docs (<100 lines each)
+- **assets/**: Files for output (templates, etc.)
+
+### Compliance Actions
+
+- [x] SKILL.md under 100 lines
+- [x] Description under 200 chars
+- [x] Python scripts (not bash)
+- [x] Tests for scripts (test_backlog_client.py, test_models.py)
+- [x] .env.example created
+- [x] Add test_status_analyzer.py (Phase 2)
+- [ ] Verify .env hierarchy in all scripts
 
 ---
 

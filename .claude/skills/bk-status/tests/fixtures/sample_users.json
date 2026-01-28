@@ -1,0 +1,5 @@
+[
+  {"id": 101, "userId": "tanaka", "name": "Tanaka Taro", "roleType": 2},
+  {"id": 102, "userId": "nguyen", "name": "Nguyen Van A", "roleType": 2},
+  {"id": 103, "userId": "suzuki", "name": "Suzuki Hanako", "roleType": 2}
+]

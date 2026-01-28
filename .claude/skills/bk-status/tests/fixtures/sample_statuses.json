@@ -1,0 +1,6 @@
+[
+  {"id": 1, "name": "Open", "projectId": 12345, "displayOrder": 1},
+  {"id": 2, "name": "In Progress", "projectId": 12345, "displayOrder": 2},
+  {"id": 3, "name": "Resolved", "projectId": 12345, "displayOrder": 3},
+  {"id": 4, "name": "Closed", "projectId": 12345, "displayOrder": 4}
+]

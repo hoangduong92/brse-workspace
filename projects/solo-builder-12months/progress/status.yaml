@@ -1,0 +1,161 @@
+# Solo Builder Journey - Progress Status
+# Update this file regularly for tracking
+
+# ===== CURRENT POSITION =====
+current:
+  week: 1                    # Calendar week (actual time)
+  phase: 2                   # Moving to Phase 2 (fast-track)
+  phase_name: "Backend + Database"
+  started_date: "2026-01-24"
+
+# ===== FAST-TRACK MODE =====
+# Philosophy: Build fast → Learn when stuck → Deep dive on problems
+fast_track:
+  enabled: true
+  curriculum_week: 13        # Content we're working on (Week 13 = API Patterns)
+  calendar_week: 1           # Actual calendar week
+  phases_completed: [1]      # Phases with core tasks done
+  note: "Week 13 started. Focus: API Patterns practice via Backlog Clone endpoints."
+
+# ===== NEXT ACTION =====
+# This is read by /sb on session start to know what to continue
+next_action:
+  task: "Build Backlog Clone MVP - API Endpoints"
+  description: "Build REST API endpoints for Backlog Clone"
+  curriculum_content: "Week 13: API Patterns"
+  plan_path: "plans/260125-1822-backlog-clone-mvp/"
+  steps:
+    - "Setup Next.js API routes structure"
+    - "Implement CRUD endpoints for organizations"
+    - "Implement CRUD endpoints for projects"
+    - "Implement CRUD endpoints for issues"
+    - "Add error handling & pagination"
+
+# ===== KEY METRICS =====
+metrics:
+  products_shipped: 2
+  total_revenue_usd: 0
+  mrr_usd: 0
+  total_users: 0
+  twitter_followers: 0
+  blog_posts: 0
+  github_commits: 5
+
+# ===== PRODUCTS =====
+products:
+  - name: "My First Next.js App"
+    shipped_date: "2026-01-24"
+    url: "https://my-first-nextjs-app-lott.vercel.app/"
+    github: "https://github.com/hoangduong92/my-first-nextjs-app"
+    revenue: 0
+    users: 0
+    status: "active"
+
+  - name: "Personal Dashboard"
+    shipped_date: "2026-01-24"
+    url: "pending-vercel-deploy"
+    github: "https://github.com/hoangduong92/personal-dashboard"
+    revenue: 0
+    users: 0
+    status: "active"
+    features: ["Todo List with time tracking", "Pomodoro Timer", "localStorage persistence"]
+
+# ===== MILESTONES =====
+milestones:
+  phase_1:
+    - task: "First template deployed"
+      target_week: 2
+      completed: true
+      completed_date: "2026-01-24"
+    - task: "First micro-tool shipped"
+      target_week: 4
+      completed: true
+      completed_date: "2026-01-24"
+    - task: "Can read and modify code"
+      target_week: 8
+      completed: true
+      completed_date: "2026-01-24"
+      note: "Demonstrated with localStorage feature addition"
+
+  phase_2:
+    - task: "Supabase auth working"
+      target_week: 10
+      completed: true
+      completed_date: "2026-01-24"
+      note: "Auth + Database CRUD completed in Day 1"
+    - task: "Fullstack app shipped"
+      target_week: 12
+      completed: true
+      completed_date: "2026-01-24"
+      note: "Personal Dashboard v2 with Supabase Auth + Database live on Vercel"
+    - task: "First paid customer"
+      target_week: 16
+      completed: false
+      completed_date: null
+
+  phase_3:
+    - task: "AI-powered feature working"
+      target_week: 18
+      completed: false
+      completed_date: null
+    - task: "5 products total shipped"
+      target_week: 24
+      completed: false
+      completed_date: null
+
+  phase_4:
+    - task: "1000 Twitter followers"
+      target_week: 28
+      completed: false
+      completed_date: null
+    - task: "1 product with traction"
+      target_week: 32
+      completed: false
+      completed_date: null
+
+  phase_5:
+    - task: "Production-quality code"
+      target_week: 36
+      completed: false
+      completed_date: null
+    - task: "Portfolio complete"
+      target_week: 40
+      completed: false
+      completed_date: null
+
+  phase_6:
+    - task: "Path chosen (A/B/C)"
+      target_week: 44
+      completed: false
+      completed_date: null
+    - task: "Year 1 complete"
+      target_week: 48
+      completed: false
+      completed_date: null
+
+# ===== ASSESSMENT SYSTEM =====
+assessments:
+  enabled: true
+  pass_threshold: 70
+  format: ["quiz", "explain-to-me"]  # No coding challenges - AI era = read code, not write
+  language: "english"
+  philosophy: "Ship fast + Learn deep = Real engineer"
+
+# ===== WEEKLY SUMMARY =====
+# Quick reference for last few weeks
+recent_weeks:
+  - week: 1
+    curriculum_weeks: "11-13"
+    hours: 10
+    energy: 10
+    highlight: "Day 1-3: 2 products shipped, Schema design, Index deep dive, API patterns review"
+    blocker: "None - requested measurable checklists (addressed)"
+    wins: "3-day streak với high energy và quyết tâm. Learning faster than expected."
+    insight: "Need checklists for each phase. DB checklist created, API checklist added."
+    concepts_learned: ["Props", "Interface", "Event Handling", "Conditional Rendering", "useEffect", "Cleanup", "Entity vs Column", "1:N/N:M Relationships", "Junction Tables", "Lookup Tables", "Database Indexes", "B-tree", "HTTP Deep Dive", "PUT vs PATCH", "Status Codes"]
+
+# ===== MONTH 12 DECISION DATA =====
+decision_data:
+  path: null  # A, B, or C
+  reasoning: null
+  decided_date: null

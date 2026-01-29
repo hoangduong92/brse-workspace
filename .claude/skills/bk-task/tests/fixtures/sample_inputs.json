@@ -1,0 +1,145 @@
+{
+  "test_cases": {
+    "TC-TK01_full_structure": {
+      "input": "明日までにログイン画面を田中さんが作成。8時間",
+      "expected": {
+        "summary": "ログイン画面を作成",
+        "assignee_hint": "田中",
+        "deadline_type": "tomorrow",
+        "estimated_hours": 8.0,
+        "task_type": "feature",
+        "priority": "normal"
+      }
+    },
+    "TC-TK02_implicit_deadline": {
+      "input": "今週中にユーザー登録機能を実装してください",
+      "expected": {
+        "summary": "ユーザー登録機能を実装",
+        "deadline_type": "end_of_week",
+        "task_type": "feature",
+        "priority": "normal"
+      }
+    },
+    "TC-TK03_asap": {
+      "input": "至急対応お願いします。ログインボタンが反応しません。",
+      "expected": {
+        "summary": "ログインボタンが反応しない問題",
+        "deadline_type": "today",
+        "task_type": "bug",
+        "priority": "high"
+      }
+    },
+    "TC-TK04_vague": {
+      "input": "できれば早めにダッシュボードの改善をお願いしたいです",
+      "expected": {
+        "summary": "ダッシュボードの改善",
+        "deadline_type": "unclear",
+        "task_type": "improvement",
+        "priority": "low",
+        "warnings": ["deadline_unclear"]
+      }
+    },
+    "TC-TK05_multiple_items": {
+      "input": "以下の対応をお願いします：\n・ログイン画面のデザイン修正\n・パスワードリセット機能追加\n・メール認証の実装\n・管理者画面の作成\n・ドキュメント更新",
+      "expected": {
+        "tasks_count": 5,
+        "summaries": [
+          "ログイン画面のデザイン修正",
+          "パスワードリセット機能追加",
+          "メール認証の実装",
+          "管理者画面の作成",
+          "ドキュメント更新"
+        ]
+      }
+    },
+    "TC-TK06_comment_source": {
+      "input": "このチケットについて、追加で以下の対応が必要です。\nエラーメッセージの日本語化\n推定：4時間",
+      "expected": {
+        "summary": "エラーメッセージの日本語化",
+        "estimated_hours": 4.0,
+        "source_type": "comment"
+      }
+    },
+    "TC-TK07_email_source": {
+      "input": "件名: ログイン不具合について\n\nお世話になっております。\n\n本日、ログイン画面でエラーが発生しました。\n環境: Chrome 120\n現象: ログインボタンをクリックしても画面が遷移しない\n再現手順:\n1. トップページを開く\n2. ログインボタンをクリック\n3. エラー発生\n\nご確認よろしくお願いいたします。",
+      "expected": {
+        "summary": "ログイン画面でエラー発生",
+        "task_type": "bug",
+        "description_contains": ["Chrome 120", "再現手順"]
+      }
+    },
+    "TC-TK08_chat_source": {
+      "input": "hey, ちょっと確認したいんだけど\nAPIの認証ってJWTでいいの？\n仕様書見てもよくわからなくて",
+      "expected": {
+        "summary": "APIの認証仕様確認",
+        "task_type": "question",
+        "priority": "normal"
+      }
+    },
+    "TC-TK09_minutes_source": {
+      "input": "【議事録】2026/01/28 定例MTG\n\n参加者：田中、山田、佐藤\n\n■ 宿題\n・田中：ログイン機能の仕様書作成（1/30まで）\n・山田：API設計レビュー（1/31まで）\n・佐藤：テスト計画書更新（2/1まで）",
+      "expected": {
+        "tasks_count": 3,
+        "tasks": [
+          {"summary": "ログイン機能の仕様書作成", "assignee_hint": "田中", "deadline": "2026-01-30"},
+          {"summary": "API設計レビュー", "assignee_hint": "山田", "deadline": "2026-01-31"},
+          {"summary": "テスト計画書更新", "assignee_hint": "佐藤", "deadline": "2026-02-01"}
+        ]
+      }
+    },
+    "TC-TK10_mixed_ja_en": {
+      "input": "login featureのbugがあります。console logでerrorが出てます。",
+      "expected": {
+        "summary": "login featureのbug",
+        "task_type": "bug",
+        "priority": "normal"
+      }
+    },
+    "TC-TK11_specific_date": {
+      "input": "2026年2月15日までにレポート機能を実装してください",
+      "expected": {
+        "summary": "レポート機能を実装",
+        "deadline": "2026-02-15",
+        "task_type": "feature"
+      }
+    },
+    "TC-TK12_next_week": {
+      "input": "来週までにセキュリティ監査の準備をお願いします",
+      "expected": {
+        "summary": "セキュリティ監査の準備",
+        "deadline_type": "end_of_next_week",
+        "priority": "normal"
+      }
+    },
+    "TC-TK13_high_priority_keywords": {
+      "input": "緊急：本番環境でデータが消失しました。即時対応が必要です。",
+      "expected": {
+        "summary": "本番環境でデータ消失",
+        "task_type": "bug",
+        "priority": "high",
+        "deadline_type": "today"
+      }
+    }
+  },
+  "task_type_keywords": {
+    "bug": ["不具合", "バグ", "エラー", "修正", "bug", "error", "fix", "問題", "障害", "消失"],
+    "feature": ["機能追加", "実装", "新規", "作成", "追加", "開発", "feature", "implement"],
+    "question": ["質問", "確認", "問い合わせ", "？", "question", "わからない"],
+    "improvement": ["改善", "最適化", "リファクタ", "向上", "enhance", "improve", "optimize"]
+  },
+  "priority_keywords": {
+    "high": ["至急", "緊急", "即時", "ASAP", "urgent", "asap", "即座", "今すぐ"],
+    "normal": ["今週中", "なるべく早く", "できれば"],
+    "low": ["時間あれば", "余裕あれば", "できれば早めに"]
+  },
+  "deadline_patterns": {
+    "today": ["本日", "今日", "至急", "緊急", "即時", "ASAP"],
+    "tomorrow": ["明日まで", "明日中"],
+    "end_of_week": ["今週中", "今週まで", "週末まで"],
+    "end_of_next_week": ["来週まで", "来週中"],
+    "specific_date_patterns": [
+      "(\\d{4})[年/\\-](\\d{1,2})[月/\\-](\\d{1,2})日?",
+      "(\\d{1,2})[月/](\\d{1,2})日?まで"
+    ]
+  }
+}

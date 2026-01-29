@@ -1,0 +1,1 @@
+# bk-minutes tests module

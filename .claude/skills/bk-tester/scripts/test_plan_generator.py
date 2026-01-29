@@ -1,0 +1,116 @@
+"""
+TestPlanGenerator: Generate test plan documents.
+"""
+
+
+def build_test_plan_prompt(requirements: str, project_name: str = "プロジェクト") -> str:
+    """
+    Build a prompt for generating a test plan.
+
+    Args:
+        requirements: The requirement document content
+        project_name: Name of the project
+
+    Returns:
+        A prompt string for claude -p
+    """
+    prompt = f"""以下の要件定義書を基に、テスト計画書を作成してください。
+
+# 要件定義書
+
+{requirements}
+
+# 指示
+
+プロジェクト名「{project_name}」のテスト計画書を以下の構成で作成してください：
+
+## 出力形式
+
+```markdown
+# テスト計画書
+
+## 1. テスト概要
+### 1.1 テスト目的
+[このテストで何を確認するか]
+
+### 1.2 テスト対象
+[テスト対象のシステム・機能]
+
+### 1.3 テスト範囲
+[テストする範囲・しない範囲]
+
+## 2. テスト戦略
+### 2.1 テストレベル
+- 単体テスト
+- 結合テスト
+- システムテスト
+- 受入テスト
+
+### 2.2 テストタイプ
+- 機能テスト
+- 非機能テスト（性能、セキュリティ、使用性など）
+
+### 2.3 テスト手法
+[使用するテスト手法・技法]
+
+## 3. テストスケジュール
+| フェーズ | 開始予定 | 終了予定 | 担当 |
+|----------|----------|----------|------|
+| テスト設計 | YYYY/MM/DD | YYYY/MM/DD | [担当者] |
+| テスト実施 | YYYY/MM/DD | YYYY/MM/DD | [担当者] |
+| 不具合修正 | YYYY/MM/DD | YYYY/MM/DD | [担当者] |
+| 再テスト | YYYY/MM/DD | YYYY/MM/DD | [担当者] |
+
+## 4. テスト環境
+### 4.1 ハードウェア構成
+[サーバー、クライアント環境]
+
+### 4.2 ソフトウェア構成
+[OS、ミドルウェア、ブラウザなど]
+
+### 4.3 テストデータ
+[使用するテストデータ]
+
+## 5. 終了基準
+- [ ] 全テストケースの実施完了
+- [ ] 重大な不具合（優先度：高）がゼロ
+- [ ] カバレッジ目標達成（xx%以上）
+- [ ] ステークホルダーの承認取得
+
+## 6. リスクと対応策
+| リスク | 影響度 | 対応策 |
+|--------|--------|--------|
+| [リスク項目] | 高/中/低 | [対応策] |
+
+## 7. 役割と責任
+| 役割 | 担当者 | 責任範囲 |
+|------|--------|----------|
+| テストマネージャー | [氏名] | テスト全体の管理 |
+| テスト担当者 | [氏名] | テスト実施 |
+| 開発担当者 | [氏名] | 不具合修正 |
+
+## 8. 成果物
+- テスト計画書（本書）
+- テスト観点表
+- テストケース一覧
+- テスト結果報告書
+- 不具合管理表
+```
+
+要件定義の内容に基づいて、具体的で実行可能なテスト計画書を作成してください。
+"""
+    return prompt
+
+
+def generate_test_plan(requirements: str, project_name: str = "プロジェクト") -> str:
+    """
+    Generate a prompt for creating a test plan.
+
+    Args:
+        requirements: The requirement document content
+        project_name: Name of the project
+
+    Returns:
+        Prompt string ready for `claude -p`
+    """
+    return build_test_plan_prompt(requirements, project_name)

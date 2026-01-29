@@ -1,0 +1,52 @@
+{
+  "name": "report-issue",
+  "description": "Issue/bug report template",
+  "recommended_level": "polite",
+  "sections": [
+    {
+      "key": "issue_title",
+      "label": "概要",
+      "type": "header"
+    },
+    {
+      "key": "environment",
+      "label": "環境",
+      "type": "text"
+    },
+    {
+      "key": "steps",
+      "label": "再現手順",
+      "type": "numbered_list"
+    },
+    {
+      "key": "expected_behavior",
+      "label": "期待動作",
+      "type": "text"
+    },
+    {
+      "key": "actual_behavior",
+      "label": "実際の動作",
+      "type": "text"
+    },
+    {
+      "key": "screenshots",
+      "label": "スクリーンショット",
+      "type": "text"
+    },
+    {
+      "key": "additional_notes",
+      "label": "備考",
+      "type": "text"
+    },
+    {
+      "key": "severity",
+      "label": "重大度",
+      "type": "text"
+    },
+    {
+      "key": "assignee",
+      "label": "担当者",
+      "type": "text"
+    }
+  ]
+}

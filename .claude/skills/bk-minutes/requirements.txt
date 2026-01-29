@@ -1,0 +1,5 @@
+# bk-minutes dependencies
+# Most deps shared via .claude/skills/.venv
+
+# Testing
+pytest>=7.0.0

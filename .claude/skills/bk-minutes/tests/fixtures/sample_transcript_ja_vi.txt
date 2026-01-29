@@ -1,0 +1,40 @@
+会議日時: 2026年1月29日 10:00-11:00
+参加者: 田中（ABC Corp）、山田（ABC Corp）、Nguyen（Dev Team）、Tran（Dev Team）
+
+=== 会議開始 ===
+
+田中: おはようございます。本日のアジェンダは3点です。
+- Sprint reviewの確認
+- 次のsprintの計画
+- 追加要件の相談
+
+Nguyen: Vâng, chúng ta bắt đầu với sprint review nhé.
+
+田中: はい。今週のsprintですが、ログイン機能は完了しましたか？
+
+Tran: Vâng, login feature đã hoàn thành rồi ạ. Nhưng có một vấn đề, staging環境でエラーが発生しています。
+
+山田: どんなエラーですか？
+
+Tran: Payment timeout error ạ。 sessionが切れてしまう問題です。
+
+田中: これは至急対応が必要ですね。Tranさん、今日中に調査をお願いできますか？
+
+Tran: Vâng, tôi sẽ điều tra ngay hôm nay.
+
+Nguyen: Phase 2のdeadlineについて心配があります。スケジュールがかなりタイトです。
+
+田中: 確かに。もし遅れそうであれば、scopeを減らす必要があるかもしれません。
+
+山田: 次のsprintの計画ですが、以下のタスクを予定しています：
+- APIの実装（田中さん担当、2月5日まで）
+- デザインのモックアップ作成（Nguyenさん担当、2月3日まで）
+- 仕様書のレビュー（山田担当、2月1日まで）
+
+田中: あと、お客様から追加要件の話がありました。詳細はまだ確認中です。
+
+Nguyen: Về budget cho server追加、cần xác nhận với customer không ạ?
+
+田中: はい、それは確認が必要ですね。私から聞いておきます。
+
+=== 会議終了 ===

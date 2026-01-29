@@ -1,0 +1,105 @@
+{
+  "keigo_conversions": {
+    "casual_to_polite": [
+      {"casual": "する", "polite": "します", "honorific": "いたします"},
+      {"casual": "行く", "polite": "行きます", "honorific": "参ります"},
+      {"casual": "見る", "polite": "見ます", "honorific": "拝見します"},
+      {"casual": "言う", "polite": "言います", "honorific": "申し上げます"},
+      {"casual": "もらう", "polite": "もらいます", "honorific": "いただきます"},
+      {"casual": "ある", "polite": "あります", "honorific": "ございます"}
+    ],
+    "greetings": {
+      "casual": "お疲れ",
+      "polite": "お疲れ様です",
+      "honorific": "いつもお世話になっております"
+    },
+    "closings": {
+      "casual": "よろしく",
+      "polite": "よろしくお願いします",
+      "honorific": "何卒よろしくお願い申し上げます"
+    }
+  },
+  "test_cases": {
+    "TC-BW01_email_client_polite": {
+      "input": {
+        "doc_type": "email-client",
+        "level": "polite",
+        "recipient": "田中様",
+        "subject": "プロジェクト進捗報告",
+        "content_points": ["設計完了", "開発開始予定"]
+      },
+      "expected": {
+        "has_greeting": true,
+        "greeting_contains": "お世話になっております",
+        "has_closing": true,
+        "closing_contains": "よろしくお願いいたします"
+      }
+    },
+    "TC-BW02_email_client_honorific": {
+      "input": {
+        "doc_type": "email-client",
+        "level": "honorific",
+        "recipient": "山田部長",
+        "subject": "ご報告"
+      },
+      "expected": {
+        "greeting_contains": "いつも大変お世話になっております",
+        "closing_contains": "何卒よろしくお願い申し上げます"
+      }
+    },
+    "TC-BW03_email_internal_casual": {
+      "input": {
+        "doc_type": "email-internal",
+        "level": "casual",
+        "recipient": "佐藤さん",
+        "subject": "MTG確認"
+      },
+      "expected": {
+        "greeting_contains": "お疲れ様",
+        "closing_contains": "よろしく"
+      }
+    },
+    "TC-BW04_report_issue_polite": {
+      "input": {
+        "doc_type": "report-issue",
+        "level": "polite",
+        "issue_title": "ログイン不具合",
+        "environment": "本番環境",
+        "steps": ["トップページアクセス", "ログインボタンクリック"],
+        "expected_behavior": "ログイン画面が表示される",
+        "actual_behavior": "エラーが発生"
+      },
+      "expected": {
+        "has_sections": ["概要", "環境", "再現手順", "期待動作", "実際の動作"]
+      }
+    },
+    "TC-BW05_design_doc_polite": {
+      "input": {
+        "doc_type": "design-doc",
+        "level": "polite",
+        "feature_name": "ユーザー認証機能",
+        "overview": "OAuth2.0による認証",
+        "tech_stack": ["React", "Node.js", "PostgreSQL"],
+        "schedule": "2週間"
+      },
+      "expected": {
+        "has_sections": ["概要", "仕様", "技術構成", "スケジュール"]
+      }
+    },
+    "TC-BW06_same_template_consistency": {
+      "input_1": {
+        "doc_type": "email-client",
+        "level": "polite",
+        "recipient": "A様",
+        "subject": "テスト"
+      },
+      "input_2": {
+        "doc_type": "email-client",
+        "level": "polite",
+        "recipient": "B様",
+        "subject": "別のテスト"
+      },
+      "expected": "Same structure, different content placeholders"
+    }
+  }
+}

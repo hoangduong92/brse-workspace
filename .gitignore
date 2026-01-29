@@ -51,3 +51,31 @@ workflow/*-report-*.json
 workflow/sheets-sync-report-*.json
 workflow/sheets-auto-sync-report-*.json
 workflow/sync-report-*.json
+
+# API Keys in text files (SENSITIVE)
+api_key*.txt
+*_api_key*.txt
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+
+# Claude Code local files
+.claude/History/
+.claude/settings.local.json
+.claude/tasks/
+.claude/.ck.json
+
+# Skills local files
+.claude/skills/.venv/
+.claude/skills/.install-state.json
+.claude/skills/**/__pycache__/
+
+# Misc
+nul
+*.bak
+.opencode/

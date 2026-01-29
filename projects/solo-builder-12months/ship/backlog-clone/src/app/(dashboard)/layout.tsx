@@ -12,12 +12,13 @@ export default async function DashboardLayout({ children }: { children: React.Re
   }
 
   // Get user profile
-  const { data: profile } = await supabase
+  const { data } = await supabase
     .from('profiles')
     .select('*, organizations(*)')
     .eq('id', user.id)
     .single()
 
+  const profile = data as { full_name: string | null; organizations: { name: string } | null } | null
   const organizationName = profile?.organizations?.name
   const userName = profile?.full_name
   const userEmail = user.email

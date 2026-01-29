@@ -13,14 +13,16 @@ export default async function DashboardPage() {
   }
 
   // Get user profile
-  const { data: profile } = await supabase
+  const { data } = await supabase
     .from('profiles')
-    .select('*')
+    .select('org_id')
     .eq('id', user.id)
     .single()
 
-  // If no organization, redirect to onboarding
-  if (!profile?.org_id) {
+  const profile = data as { org_id: number | null } | null
+
+  // If no profile or no organization, redirect to onboarding
+  if (!profile || !profile.org_id) {
     redirect('/dashboard/onboarding')
   }
 

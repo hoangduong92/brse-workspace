@@ -41,9 +41,10 @@ export default function IssueDetailPage() {
       setProject(projectData)
 
       const issueData = await getIssue(projectKey, issueNumber)
+      if (!issueData) throw new Error('Issue not found')
       setIssue(issueData)
 
-      const commentsData = await getComments(issueData.id)
+      const commentsData = await getComments((issueData as { id: number }).id)
       setComments(commentsData)
 
       // TODO: Load project members from API

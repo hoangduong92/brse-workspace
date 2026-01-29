@@ -1,0 +1,169 @@
+================================================================================
+                    ISSUE LOADING - TEST REPORT SUMMARY
+================================================================================
+Date: 2026-01-26 15:15
+Project: backlog-clone
+Report: tester-260126-1515-issue-loading-tests.md
+
+================================================================================
+STATUS: ISSUES FOUND & RECOMMENDATIONS READY
+================================================================================
+
+ROOT CAUSES (Confirmed):
+  1. Duplicate Routes (2 identical issue page files)
+  2. Weak Error Handling (errors hidden from user)
+  3. Missing Member Loading (empty array hardcoded)
+  4. No Test Coverage (0 test files)
+
+DATABASE: CORRECT
+  - User IS project member (Admin role)
+  - 2 issues exist in correct database
+  - RLS policies should allow access
+
+================================================================================
+CRITICAL FINDINGS
+================================================================================
+
+1. DUPLICATE ROUTES (CONFIRMED)
+   Location 1: src/app/(dashboard)/dashboard/projects/[projectKey]/issues/page.tsx
+   Location 2: src/app/(dashboard)/projects/[projectKey]/issues/page.tsx
+   Status:    Both files IDENTICAL (120 lines)
+   Fix:       DELETE Location 2, keep Location 1 only
+
+2. ERROR HANDLING (WEAK)
+   Problem:   Errors caught but not shown to user
+   Impact:    RLS blocking shows as generic "Failed to load data"
+   Fix:       Add detailed error messages
+
+3. MEMBERS API (TODO)
+   Problem:   Members hardcoded as empty array
+   Impact:    UI cannot filter by assignees
+   Fix:       Create getProjectMembers() API
+
+4. TEST COVERAGE (ZERO)
+   Status:    0 test files
+   Missing:   vitest, @testing-library/react
+   Fix:       Setup vitest + create tests
+
+================================================================================
+IMMEDIATE ACTIONS (Today)
+================================================================================
+
+1. CONSOLIDATE ROUTES (30 min)
+   - Delete: src/app/(dashboard)/projects/[projectKey]/issues/page.tsx
+   - Keep:   src/app/(dashboard)/dashboard/projects/[projectKey]/issues/page.tsx
+
+2. ADD ERROR LOGGING (1 hour)
+   - Show actual error in UI instead of alert
+   - Log RLS errors specifically
+
+3. MANUAL BROWSER TEST (30 min)
+   - npm run dev
+   - Create new issue
+   - Check if issue appears immediately
+   - Open DevTools Console for errors
+
+EXPECTED RESULT:
+  - Issues appear: root cause was routing/caching
+  - Issues don't appear: verify user in project_members
+  - Error visible: exact problem identified
+
+================================================================================
+FOLLOW-UP (This Week)
+================================================================================
+
+PHASE 2: Setup Tests (2-3 hours)
+  - Install: vitest @testing-library/react jsdom
+  - Create: vitest.config.ts, vitest.setup.ts
+  - Update: package.json scripts
+
+PHASE 3: Write Tests (4-6 hours)
+  - tests/api/issues.test.ts
+  - tests/api/projects.test.ts
+  - tests/pages/issues-page.test.tsx
+  - Run: npm run test (all pass)
+
+PHASE 4: Integration Tests (2-3 hours)
+  - Setup local Supabase
+  - Test full flow: create → create issue → load
+
+================================================================================
+TEST CASES NEEDED
+================================================================================
+
+Priority 1: RLS & Access
+  - Project creator can see issues
+  - Non-member blocked (RLS)
+  - Issue creation sets reporter_id
+
+Priority 2: Data Integrity
+  - Issue number auto-incremented
+  - Categories saved
+  - Soft-deleted excluded
+
+Priority 3: Error Scenarios
+  - Unauthenticated error
+  - Invalid project handling
+  - Category constraint
+
+Priority 4: Performance
+  - 100+ issues load <500ms
+  - No N+1 queries
+
+================================================================================
+SUCCESS CRITERIA
+================================================================================
+
+  ✓ Only ONE issues page exists
+  ✓ User can create issue
+  ✓ Issue appears immediately
+  ✓ All tests pass (100%)
+  ✓ No console errors
+  ✓ Non-members see empty list
+
+================================================================================
+FILES
+================================================================================
+
+Key Files:
+  - src/lib/api/issues.ts
+  - src/lib/api/projects.ts
+  - src/app/(dashboard)/dashboard/projects/[projectKey]/issues/page.tsx (KEEP)
+  - src/app/(dashboard)/projects/[projectKey]/issues/page.tsx (DELETE)
+
+To Create:
+  - vitest.config.ts
+  - vitest.setup.ts
+  - tests/api/issues.test.ts
+  - tests/api/projects.test.ts
+  - tests/pages/issues-page.test.tsx
+
+Diagnostic Scripts:
+  - scripts/diagnose-admin.mjs
+  - scripts/test-rls-query.mjs
+
+================================================================================
+TIMELINE
+================================================================================
+
+Phase 1 (Immediate): 1-2 hours (today)
+Phase 2 (Tests):     2-3 hours (today/tomorrow)
+Phase 3 (Coverage):  4-6 hours (this week)
+Phase 4 (Integ):     2-3 hours (next week)
+
+TOTAL: 10-15 hours to full resolution
+
+================================================================================
+UNRESOLVED QUESTIONS
+================================================================================
+
+1. Which URL accessed? /projects/SBP/issues or /dashboard/projects/SBP/issues?
+2. What errors in DevTools Console?
+3. Is auth token valid during getIssues()?
+4. What shows on issues page currently?
+5. Was user added as member BEFORE issue creation?
+6. Browser cache issues?
+
+See full report for details.
+
+================================================================================

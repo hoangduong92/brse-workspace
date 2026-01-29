@@ -1,7 +1,7 @@
 """Unit tests for bk-status models."""
 
 import pytest
-from scripts.models import User, Status, Project, Issue
+from scripts.models import User, Status, Project, Issue, RiskLevel
 
 
 class TestUser:
@@ -142,3 +142,62 @@ class TestIssue:
         issue = Issue.from_dict(data)
         assert issue.due_date is None
         assert issue.assignee_id == 102
+
+    def test_from_dict_with_hours(self):
+        """Issue.from_dict parses estimatedHours and actualHours."""
+        data = {
+            "id": 1004,
+            "projectId": 12345,
+            "issueKey": "TEST-4",
+            "summary": "Issue with hours",
+            "issueType": {"id": 1},
+            "priority": {"id": 2},
+            "status": {"id": 1},
+            "estimatedHours": 16.0,
+            "actualHours": 4.5
+        }
+        issue = Issue.from_dict(data)
+        assert issue.estimated_hours == 16.0
+        assert issue.actual_hours == 4.5
+
+    def test_from_dict_null_hours(self):
+        """Issue.from_dict handles null hours."""
+        data = {
+            "id": 1005,
+            "projectId": 12345,
+            "issueKey": "TEST-5",
+            "summary": "Null hours",
+            "issueType": {"id": 1},
+            "priority": {"id": 2},
+            "status": {"id": 1},
+            "estimatedHours": None,
+            "actualHours": None
+        }
+        issue = Issue.from_dict(data)
+        assert issue.estimated_hours is None
+        assert issue.actual_hours is None
+
+    def test_from_dict_missing_hours(self):
+        """Issue.from_dict handles missing hours fields."""
+        data = {
+            "id": 1006,
+            "projectId": 12345,
+            "issueKey": "TEST-6",
+            "summary": "No hours fields",
+            "issueType": {"id": 1},
+            "priority": {"id": 2},
+            "status": {"id": 1}
+        }
+        issue = Issue.from_dict(data)
+        assert issue.estimated_hours is None
+        assert issue.actual_hours is None
+
+
+class TestRiskLevel:
+    """Tests for RiskLevel enum."""
+
+    def test_risk_level_values(self):
+        """RiskLevel has correct values."""
+        assert RiskLevel.ON_TRACK.value == "on_track"
+        assert RiskLevel.AT_RISK.value == "at_risk"
+        assert RiskLevel.LATE.value == "late"

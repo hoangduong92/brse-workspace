@@ -18,21 +18,31 @@ Check Nulab Backlog project progress: late tasks, overloaded members, project he
 # Copy .env.example and fill in credentials
 cp .claude/skills/bk-status/.env.example .claude/skills/bk-status/.env
 
-# Install dependencies
-cd .claude/skills && .venv/Scripts/pip install -r bk-status/requirements.txt
+# Install dependencies (use forward slashes for Git Bash/MINGW64)
+cd ".claude/skills" && ".venv/Scripts/pip.exe" install -r bk-status/requirements.txt
 ```
 
 ## Usage
 
 ```
-/bk-status [--threshold N]
+/bk-status [--threshold N] [--capacity H] [--lang LANG]
 ```
 
 **Examples:**
 ```
-/bk-status                    # Default threshold: >5 issues = overloaded
-/bk-status --threshold 3      # Custom threshold
+/bk-status                    # Default: threshold=5, capacity=4h/day, lang from master.yaml
+/bk-status --threshold 3      # Custom overloaded threshold
+/bk-status --capacity 6       # Custom hours per day capacity
+/bk-status --lang vi          # Vietnamese report output
+/bk-status --lang ja          # Japanese report output
 ```
+
+**Language Options:**
+- `en` - English (default)
+- `vi` - Vietnamese (Tiếng Việt)
+- `ja` - Japanese (日本語)
+
+Default language can be set in `brsekit/master.yaml` under `lang` field.
 
 ## Workflow Instructions (for Claude Code)
 
@@ -41,7 +51,8 @@ Read `.claude/skills/bk-status/.env` for `NULAB_SPACE_URL`, `NULAB_API_KEY`, `NU
 
 ### Step 2: Fetch Data
 ```bash
-cd .claude/skills/bk-status && python scripts/main.py [--threshold N]
+# IMPORTANT: Use forward slashes for cross-platform compatibility (Git Bash/MINGW64)
+cd ".claude/skills/bk-status" && "../.venv/Scripts/python.exe" scripts/main.py [--threshold N]
 ```
 
 ### Step 3: Report Output
@@ -51,14 +62,25 @@ Report saved to: `./project-status/YYYYMMDD-HHMMSS_{projectName}-status.md`
 
 | Section | Description |
 |---------|-------------|
-| Summary | Total issues, closed count, progress % |
+| Summary | Total issues, closed count, count-based progress % |
+| Hours Progress | Estimated vs actual hours, hours-based progress % |
+| At-Risk Tasks | Tasks requiring more than capacity to meet deadline |
 | Late Tasks | Issues past due date (status != Closed) |
 | Workload | Open issues per member |
 
-## Late Task Logic
+## Risk Detection Logic
 
 - **Late** = `dueDate < today` AND status is NOT "Closed"
+- **At-Risk** = `required_velocity > capacity` (needs more hours/day than available)
+- **On-Track** = `required_velocity <= capacity`
 - **Overloaded** = member has > threshold open issues (default: 5)
+
+**Velocity Calculation:**
+```
+hours_remaining = estimated_hours - actual_hours
+days_remaining = due_date - today
+required_velocity = hours_remaining / days_remaining
+```
 
 ## Environment Variables
 
@@ -80,5 +102,6 @@ Report saved to: `./project-status/YYYYMMDD-HHMMSS_{projectName}-status.md`
 ## Tests
 
 ```bash
-cd .claude/skills/bk-status && python -m pytest tests/ -v
+# Use forward slashes for Git Bash/MINGW64 compatibility
+cd ".claude/skills/bk-status" && "../.venv/Scripts/python.exe" -m pytest tests/ -v
 ```

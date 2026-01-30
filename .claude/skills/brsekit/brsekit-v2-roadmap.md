@@ -34,7 +34,7 @@ Bộ công cụ AI hỗ trợ BrSE giảm 30-40 phút/ngày cho các công việ
 |-------|------|--------|------------|-------------|
 | 1 | Storage Infrastructure | ✅ Complete | ~1,060 | Directory structure, Knowledge/Memory stores, Metadata DB |
 | 2 | Semantic Search | ✅ Complete | ~510 | Per-project embeddings, Hybrid search, Indexer |
-| 3 | Auto-sync & Morning Brief | 📋 Planned | ~460 | Comments sync, Unread detection, `/bk-morning` |
+| 3 | Auto-sync & Morning Brief | ✅ Complete | ~460 | Comments sync, Unread detection, `/bk-morning` |
 | **Total** | | | **~2,030** | |
 
 ## Phase Details

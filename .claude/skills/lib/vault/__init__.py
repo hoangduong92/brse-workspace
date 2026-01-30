@@ -27,6 +27,10 @@ from .embedding_store import SearchResult as EmbeddingSearchResult
 from .hybrid_search import HybridSearch
 from .indexer import Indexer
 
+# v2 Phase 3 modules - auto-sync & morning brief
+from .morning_brief import MorningBrief
+from .sync_scheduler import SyncScheduler, SyncStatus
+
 __all__ = [
     # Legacy v1
     "VaultDB",
@@ -59,4 +63,8 @@ __all__ = [
     "EmbeddingSearchResult",
     "HybridSearch",
     "Indexer",
+    # v2 Phase 3 - Auto-sync & Morning Brief
+    "MorningBrief",
+    "SyncScheduler",
+    "SyncStatus",
 ]

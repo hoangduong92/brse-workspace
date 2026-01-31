@@ -1,0 +1,97 @@
+BÁO CÁO GIẢI TRÌNH SỰ CỐ HỆ THỐNG PHÒNG CHỜ ẢO
+Ngày xảy ra sự cố: 29/01/2026
+Người báo cáo: Nguyễn Văn A - Technical Lead
+Mức độ nghiêm trọng: Critical
+
+---
+
+1. TÓM TẮT SỰ CỐ
+
+Vào lúc 14:30 ngày 29/01/2026, hệ thống Phòng Chờ Ảo (Virtual Waiting Room) đã gặp sự cố nghiêm trọng khiến toàn bộ người dùng không thể truy cập vào phòng chờ. Sự cố kéo dài trong khoảng 45 phút và ảnh hưởng đến khoảng 2,500 người dùng đang chờ đợi để tham gia sự kiện trực tuyến "Tech Summit 2026".
+
+Nguyên nhân chính được xác định là do lỗi trong cơ chế xử lý kết nối WebSocket khi số lượng người dùng đồng thời vượt quá ngưỡng cho phép của hệ thống. Cụ thể, khi số lượng kết nối đạt đến 2,000 người dùng, server bắt đầu từ chối các kết nối mới và không gửi thông báo lỗi phù hợp cho phía client.
+
+2. MÔ TẢ CHI TIẾT SỰ CỐ
+
+2.1 Bối cảnh
+Hệ thống Phòng Chờ Ảo được thiết kế để quản lý lưu lượng người dùng trước khi họ được phép tham gia vào sự kiện chính. Mục đích là tránh quá tải cho server chính và đảm bảo trải nghiệm người dùng được công bằng thông qua cơ chế xếp hàng.
+
+2.2 Diễn biến sự cố
+- 14:00: Sự kiện Tech Summit 2026 được công bố và link phòng chờ được chia sẻ trên các kênh truyền thông.
+- 14:15: Số lượng người dùng bắt đầu tăng nhanh, đạt 1,500 kết nối đồng thời.
+- 14:25: Hệ thống ghi nhận 1,800 kết nối và bắt đầu có dấu hiệu chậm trong việc cập nhật vị trí hàng đợi.
+- 14:30: Số lượng kết nối đạt 2,100 và hệ thống bắt đầu từ chối kết nối mới. Người dùng nhận được màn hình trắng thay vì giao diện phòng chờ.
+- 14:35: Đội ngũ kỹ thuật nhận được cảnh báo từ hệ thống monitoring và bắt đầu điều tra.
+- 14:45: Xác định được nguyên nhân là do cấu hình giới hạn kết nối WebSocket trên load balancer.
+- 15:00: Tiến hành scale-up server và điều chỉnh cấu hình load balancer.
+- 15:15: Hệ thống hoạt động trở lại bình thường.
+
+2.3 Tác động
+- Khoảng 500 người dùng không thể truy cập phòng chờ trong thời gian sự cố.
+- 150 người dùng đã thoát khỏi hệ thống và không quay lại.
+- Nhận được 87 phản hồi tiêu cực trên mạng xã hội và email hỗ trợ.
+- Uy tín của nền tảng bị ảnh hưởng đối với khách hàng doanh nghiệp đang cân nhắc sử dụng dịch vụ.
+
+3. PHÂN TÍCH NGUYÊN NHÂN GỐC RỄ
+
+3.1 Nguyên nhân trực tiếp
+Cấu hình mặc định của load balancer AWS ALB giới hạn số lượng kết nối WebSocket đồng thời là 2,000. Khi vượt quá ngưỡng này, các kết nối mới sẽ bị từ chối mà không có xử lý lỗi phù hợp.
+
+3.2 Nguyên nhân gián tiếp
+- Thiếu stress testing với số lượng người dùng cao trước khi triển khai.
+- Không có cơ chế auto-scaling cho WebSocket connections.
+- Thiếu monitoring alert cho metric về số lượng kết nối WebSocket.
+- Documentation về giới hạn hệ thống không được cập nhật đầy đủ.
+
+3.3 Các yếu tố góp phần
+- Sự kiện Tech Summit 2026 được quảng bá rộng rãi hơn dự kiến.
+- Thời điểm mở link trùng với giờ nghỉ trưa của nhiều người dùng tại Việt Nam.
+- Không có cơ chế rate limiting cho việc truy cập vào phòng chờ.
+
+4. GIẢI PHÁP ĐÃ THỰC HIỆN
+
+4.1 Giải pháp ngắn hạn (đã hoàn thành)
+- Tăng giới hạn kết nối WebSocket trên load balancer lên 10,000.
+- Thêm 2 instance EC2 để xử lý tải tăng đột biến.
+- Triển khai graceful degradation: hiển thị thông báo "Hệ thống đang bận" thay vì màn hình trắng.
+- Thêm monitoring alert cho metric WebSocket connections với ngưỡng cảnh báo ở 70% capacity.
+
+4.2 Giải pháp trung hạn (đang triển khai)
+- Implement auto-scaling group cho WebSocket server.
+- Thêm Redis cluster để cache thông tin vị trí hàng đợi, giảm tải cho database.
+- Xây dựng circuit breaker pattern để xử lý khi hệ thống quá tải.
+- Cập nhật error handling trên client để hiển thị thông báo lỗi rõ ràng.
+
+4.3 Giải pháp dài hạn (kế hoạch)
+- Nghiên cứu và triển khai horizontal scaling cho WebSocket connections sử dụng Socket.IO với Redis adapter.
+- Xây dựng hệ thống stress testing tự động chạy trước mỗi lần release.
+- Thiết lập disaster recovery plan với multi-region deployment.
+- Đào tạo team về best practices khi xử lý high-traffic events.
+
+5. BÀI HỌC KINH NGHIỆM
+
+5.1 Về kỹ thuật
+Việc thiếu stress testing với realistic load đã dẫn đến việc không phát hiện được giới hạn của hệ thống trước khi đưa vào production. Từ nay, mọi tính năng liên quan đến real-time communication cần phải được test với ít nhất 150% expected load.
+
+5.2 Về quy trình
+Cần có checklist rõ ràng cho việc chuẩn bị high-traffic events, bao gồm việc review cấu hình infrastructure, chuẩn bị on-call team, và thông báo trước cho các stakeholder về potential risks.
+
+5.3 Về communication
+Trong thời gian sự cố, việc thông báo cho người dùng bị chậm trễ do không có quy trình communication plan rõ ràng. Cần thiết lập incident response playbook với các template thông báo sẵn có.
+
+6. KẾ HOẠCH PHÒNG NGỪA
+
+- Tuần 1-2: Hoàn thành auto-scaling implementation và stress testing framework.
+- Tuần 3-4: Triển khai Redis cluster và cập nhật error handling.
+- Tháng 2: Thực hiện full disaster recovery drill.
+- Hàng tháng: Review capacity planning và cập nhật documentation.
+
+7. KẾT LUẬN
+
+Sự cố ngày 29/01/2026 là một bài học quý giá cho đội ngũ phát triển. Mặc dù ảnh hưởng đến trải nghiệm người dùng trong thời gian ngắn, nhưng đã giúp chúng tôi nhận ra các điểm yếu trong hệ thống và quy trình. Các giải pháp đang được triển khai sẽ đảm bảo hệ thống có khả năng xử lý lưu lượng cao hơn gấp 5 lần so với hiện tại, đồng thời có cơ chế fallback phù hợp khi gặp sự cố.
+
+Chúng tôi cam kết sẽ hoàn thành các giải pháp đã đề ra theo đúng timeline và báo cáo tiến độ hàng tuần cho ban quản lý.
+
+---
+Người phê duyệt: _________________
+Ngày phê duyệt: _________________

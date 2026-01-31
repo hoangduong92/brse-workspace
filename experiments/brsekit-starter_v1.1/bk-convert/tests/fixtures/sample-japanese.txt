@@ -1,0 +1,14 @@
+バグを修正しました。
+
+テストを実施して、問題がないことを確認しました。
+
+変更内容:
+```typescript
+function fixBug() {
+  return true;
+}
+```
+
+詳細はこちら: https://github.com/user/repo/issues/123
+
+コマンド: `npm test`

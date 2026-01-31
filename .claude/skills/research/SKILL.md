@@ -1,114 +1,170 @@
 ---
 name: research
-description: Comprehensive research, analysis, and content extraction system. USE WHEN user says 'do research', 'do extensive research', 'quick research', 'minor research', 'research this', 'find information', 'investigate', 'extract wisdom', 'extract alpha', 'analyze content', 'can't get this content', 'use fabric', OR requests any web/content research. Supports three research modes (quick/standard/extensive), deep content analysis, intelligent retrieval, and 242+ Fabric patterns. NOTE: For due diligence, OSINT, or background checks, use OSINT skill instead.
-implements: Science
-science_cycle_time: meso
-context: fork
+description: Research technical solutions, analyze architectures, gather requirements thoroughly. Use for technology evaluation, best practices research, solution design, scalability/security/maintainability analysis.
+license: MIT
 ---
 
-## Customization
+# Research
 
-**Before executing, check for user customizations at:**
-`~/.claude/skills/CORE/USER/SKILLCUSTOMIZATIONS/Research/`
+## Research Methodology
 
-If this directory exists, load and apply any PREFERENCES.md, configurations, or resources found there. These override default behavior. If the directory does not exist, proceed with skill defaults.
+Always honoring **YAGNI**, **KISS**, and **DRY** principles.
+**Be honest, be brutal, straight to the point, and be concise.**
 
-# Research Skill
+### Phase 1: Scope Definition
 
-Comprehensive research, analysis, and content extraction system.
+First, you will clearly define the research scope by:
+- Identifying key terms and concepts to investigate
+- Determining the recency requirements (how current must information be)
+- Establishing evaluation criteria for sources
+- Setting boundaries for the research depth
 
-## MANDATORY: URL Verification
+### Phase 2: Systematic Information Gathering
 
-**READ:** `UrlVerificationProtocol.md` - Every URL must be verified before delivery.
+You will employ a multi-source research strategy:
 
-Research agents hallucinate URLs. A single broken link is a catastrophic failure.
+1. **Search Strategy**:
+   - **Gemini Toggle**: Check `.claude/.ck.json` (or `~/.claude/.ck.json`) for `skills.research.useGemini` (default: `true`). If `false`, skip Gemini and use WebSearch.
+   - **Gemini Model**: Read from `.claude/.ck.json`: `gemini.model` (default: `gemini-3.0-flash`)
+   - If `useGemini` is enabled and `gemini` bash command is available, execute `gemini -y -m <gemini.model> "...your search prompt..."` bash command (timeout: 10 minutes) and save the output using `Report:` path from `## Naming` section (including all citations).
+   - If `useGemini` is disabled or `gemini` bash command is not available, use `WebSearch` tool.
+   - Run multiple `gemini` bash commands or `WebSearch` tools in parallel to search for relevant information.
+   - Craft precise search queries with relevant keywords
+   - Include terms like "best practices", "2024", "latest", "security", "performance"
+   - Search for official documentation, GitHub repositories, and authoritative blogs
+   - Prioritize results from recognized authorities (official docs, major tech companies, respected developers)
+   - **IMPORTANT:** You are allowed to perform at most **5 researches (max 5 tool calls)**, user might request less than this amount, **strictly respect it**, think carefully based on the task before performing each related research topic.
 
----
+2. **Deep Content Analysis**:
+   - When you found a potential Github repository URL, use `docs-seeker` skill to find read it.
+   - Focus on official documentation, API references, and technical specifications
+   - Analyze README files from popular GitHub repositories
+   - Review changelog and release notes for version-specific information
 
-## Voice Notification
+3. **Video Content Research**:
+   - Prioritize content from official channels, recognized experts, and major conferences
+   - Focus on practical demonstrations and real-world implementations
 
-**When executing a workflow, do BOTH:**
+4. **Cross-Reference Validation**:
+   - Verify information across multiple independent sources
+   - Check publication dates to ensure currency
+   - Identify consensus vs. controversial approaches
+   - Note any conflicting information or debates in the community
 
-1. **Send voice notification**:
-   ```bash
-   curl -s -X POST http://localhost:8888/notify \
-     -H "Content-Type: application/json" \
-     -d '{"message": "Running the WORKFLOWNAME workflow from the Research skill"}' \
-     > /dev/null 2>&1 &
-   ```
+### Phase 3: Analysis and Synthesis
 
-2. **Output text notification**:
-   ```
-   Running the **WorkflowName** workflow from the **Research** skill...
-   ```
+You will analyze gathered information by:
+- Identifying common patterns and best practices
+- Evaluating pros and cons of different approaches
+- Assessing maturity and stability of technologies
+- Recognizing security implications and performance considerations
+- Determining compatibility and integration requirements
 
-**Full documentation:** `~/.claude/skills/CORE/SYSTEM/THENOTIFICATIONSYSTEM.md`
+### Phase 4: Report Generation
 
-## Workflow Routing
+**Notes:**
+- Research reports are saved using `Report:` path from `## Naming` section.
+- If `## Naming` section is not available, ask main agent to provide the output path.
 
-Route to the appropriate workflow based on the request.
+You will create a comprehensive markdown report with the following structure:
 
-**CRITICAL:** For due diligence, company/person background checks, or vetting -> **INVOKE OSINT SKILL INSTEAD**
+```markdown
+# Research Report: [Topic]
 
-### Research Modes (Primary Workflows)
-- Quick/minor research (1 Claude, 1 query) -> `Workflows/QuickResearch.md`
-- Standard research - DEFAULT (2 agents: Claude + Gemini) -> `Workflows/StandardResearch.md`
-- Extensive research (3 types x 3 threads = 9 agents) -> `Workflows/ExtensiveResearch.md`
+## Executive Summary
+[2-3 paragraph overview of key findings and recommendations]
 
-### Deep Content Analysis
-- Extract alpha / deep analysis / highest-alpha insights -> `Workflows/ExtractAlpha.md`
+## Research Methodology
+- Sources consulted: [number]
+- Date range of materials: [earliest to most recent]
+- Key search terms used: [list]
 
-### Content Retrieval
-- Difficulty accessing content (CAPTCHA, bot detection, blocking) -> `Workflows/Retrieve.md`
-- YouTube URL extraction (use `fabric -y URL` immediately) -> `Workflows/YoutubeExtraction.md`
-- Web scraping -> `Workflows/WebScraping.md`
+## Key Findings
 
-### Specific Research Types
-- Claude WebSearch only (free, no API keys) -> `Workflows/ClaudeResearch.md`
-- Interview preparation (Tyler Cowen style) -> `Workflows/InterviewResearch.md`
-- AI trends analysis -> `Workflows/AnalyzeAiTrends.md`
+### 1. Technology Overview
+[Comprehensive description of the technology/topic]
 
-### Fabric Pattern Processing
-- Use Fabric patterns (242+ specialized prompts) -> `Workflows/Fabric.md`
+### 2. Current State & Trends
+[Latest developments, version information, adoption trends]
 
-### Content Enhancement
-- Enhance/improve content -> `Workflows/Enhance.md`
-- Extract knowledge from content -> `Workflows/ExtractKnowledge.md`
+### 3. Best Practices
+[Detailed list of recommended practices with explanations]
 
----
+### 4. Security Considerations
+[Security implications, vulnerabilities, and mitigation strategies]
 
-## Quick Reference
+### 5. Performance Insights
+[Performance characteristics, optimization techniques, benchmarks]
 
-**READ:** `QuickReference.md` for detailed examples and mode comparison.
+## Comparative Analysis
+[If applicable, comparison of different solutions/approaches]
 
-| Trigger | Mode | Speed |
-|---------|------|-------|
-| "quick research" | 1 Claude agent | ~10-15s |
-| "do research" | 2 agents (default) | ~15-30s |
-| "extensive research" | 9 agents | ~60-90s |
+## Implementation Recommendations
 
----
+### Quick Start Guide
+[Step-by-step getting started instructions]
 
-## Integration
+### Code Examples
+[Relevant code snippets with explanations]
 
-### Feeds Into
-- **blogging** - Research for blog posts
-- **newsletter** - Research for newsletters
-- **xpost** - Create posts from research
+### Common Pitfalls
+[Mistakes to avoid and their solutions]
 
-### Uses
-- **be-creative** - deep thinking for extract alpha
-- **OSINT** - MANDATORY for company/people comprehensive research
-- **BrightData MCP** - CAPTCHA solving, advanced scraping
-- **Apify MCP** - RAG browser, specialized site scrapers
+## Resources & References
 
----
+### Official Documentation
+- [Linked list of official docs]
 
-## File Organization
+### Recommended Tutorials
+- [Curated list with descriptions]
 
-**Scratch (temporary work artifacts):** `~/.claude/MEMORY/WORK/{current_work}/scratch/`
-- Read `~/.claude/MEMORY/STATE/current-work.json` to get the `work_dir` value
-- All iterative work artifacts go in the current work item's scratch/ subdirectory
-- This ties research artifacts to the work item for learning and context
+### Community Resources
+- [Forums, Discord servers, Stack Overflow tags]
 
-**History (permanent):** `~/.claude/History/research/YYYY-MM/YYYY-MM-DD_[topic]/`
+### Further Reading
+- [Advanced topics and deep dives]
+
+## Appendices
+
+### A. Glossary
+[Technical terms and definitions]
+
+### B. Version Compatibility Matrix
+[If applicable]
+
+### C. Raw Research Notes
+[Optional: detailed notes from research process]
+```
+
+## Quality Standards
+
+You will ensure all research meets these criteria:
+- **Accuracy**: Information is verified across multiple sources
+- **Currency**: Prioritize information from the last 12 months unless historical context is needed
+- **Completeness**: Cover all aspects requested by the user
+- **Actionability**: Provide practical, implementable recommendations
+- **Clarity**: Use clear language, define technical terms, provide examples
+- **Attribution**: Always cite sources and provide links for verification
+
+## Special Considerations
+
+- When researching security topics, always check for recent CVEs and security advisories
+- For performance-related research, look for benchmarks and real-world case studies
+- When investigating new technologies, assess community adoption and support levels
+- For API documentation, verify endpoint availability and authentication requirements
+- Always note deprecation warnings and migration paths for older technologies
+
+## Output Requirements
+
+Your final report must:
+1. Be saved using the `Report:` path from `## Naming` section with a descriptive filename
+2. Include a timestamp of when the research was conducted
+3. Provide clear section navigation with a table of contents for longer reports
+4. Use code blocks with appropriate syntax highlighting
+5. Include diagrams or architecture descriptions where helpful (in mermaid or ASCII art)
+6. Conclude with specific, actionable next steps
+
+**IMPORTANT:** Sacrifice grammar for the sake of concision when writing reports.
+**IMPORTANT:** In reports, list any unresolved questions at the end, if any.
+
+**Remember:** You are not just collecting information, but providing strategic technical intelligence that enables informed decision-making. Your research should anticipate follow-up questions and provide comprehensive coverage of the topic while remaining focused and practical.

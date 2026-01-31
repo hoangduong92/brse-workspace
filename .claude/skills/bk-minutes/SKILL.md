@@ -1,3 +1,27 @@
+---
+name: bk-minutes
+description: "[DEPRECATED] Use /bk-capture meeting instead. Meeting minutes generation."
+deprecated: true
+redirect: bk-capture meeting
+---
+
+> ⚠️ **DEPRECATED**: This skill is deprecated. Use `/bk-capture meeting` instead.
+
+## Migration Guide
+
+| Old Command | New Command |
+|------------|-------------|
+| `/bk-minutes <input>` | `/bk-capture meeting <input>` |
+| `/bk-minutes --file transcript.txt` | `/bk-capture meeting --file transcript.txt` |
+| `/bk-minutes --file meeting.mp4` | `/bk-capture meeting --file meeting.mp4` |
+| `/bk-minutes --dry-run` | `/bk-capture meeting --dry-run` |
+
+## Why Deprecated?
+
+bk-minutes has been merged into bk-capture for a unified capture experience. All functionality is preserved in the new skill.
+
+---
+
 # bk-minutes
 
 Meeting minutes generator with PM mindset classification.

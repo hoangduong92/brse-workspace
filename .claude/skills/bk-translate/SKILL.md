@@ -1,3 +1,26 @@
+---
+name: bk-translate
+description: "[DEPRECATED] Use /bk-convert instead. JA↔VI translation."
+deprecated: true
+redirect: bk-convert
+---
+
+> ⚠️ **DEPRECATED**: This skill is deprecated. Use `/bk-convert` instead.
+
+## Migration Guide
+
+| Old Command | New Command |
+|------------|-------------|
+| `/bk-translate --text "テキスト"` | `/bk-convert --text "テキスト"` |
+| `/bk-translate --file input.txt` | `/bk-convert --file input.txt` |
+| `/bk-translate --glossary custom.json` | `/bk-convert --glossary custom.json` |
+
+## Why Deprecated?
+
+bk-translate has been renamed to bk-convert for clearer naming. All functionality is preserved in the new skill.
+
+---
+
 # bk-translate
 
 **JA↔VI Translation with Glossary Support**

@@ -1,0 +1,45 @@
+# Waterfall Methodology PM Template
+# Focus: Change Request tracking, Budget monitoring, Documentation quality
+
+focus_areas:
+  primary:
+    - change_request_tracking
+    - budget_monitoring
+    - documentation_quality
+  secondary:
+    - scope_alignment
+    - milestone_tracking
+
+warning_triggers:
+  high:
+    - "scope change"
+    - "追加要件"
+    - "budget"
+    - "delay"
+    - "schedule slip"
+  medium:
+    - "clarification"
+    - "確認"
+    - "review"
+    - "approval"
+
+pm_checklist:
+  weekly:
+    - "Review CR status and impact"
+    - "Check budget burn rate"
+    - "Verify documentation completeness"
+    - "Track milestone progress"
+  meeting:
+    - "Confirm scope alignment"
+    - "Track action items"
+    - "Review change requests"
+    - "Validate deliverables"
+  before_phase_gate:
+    - "Complete all documentation"
+    - "Obtain customer approval"
+    - "Update project plan"
+    - "Assess risks for next phase"
+
+communication_style: "formal"
+reporting_frequency: "weekly"
+escalation_threshold: "any scope change"

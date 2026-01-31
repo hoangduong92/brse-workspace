@@ -1,11 +1,30 @@
 ---
 name: bk-task
-description: Parse unstructured Japanese input into structured Backlog tasks. Supports customer emails, chat messages, meeting minutes.
+description: "[DEPRECATED] Use /bk-capture task instead. Parse unstructured input into tasks."
+deprecated: true
+redirect: bk-capture task
 license: MIT
 allowed-tools:
   - Bash
   - Read
   - Write
+---
+
+> ⚠️ **DEPRECATED**: This skill is deprecated. Use `/bk-capture task` instead.
+
+## Migration Guide
+
+| Old Command | New Command |
+|------------|-------------|
+| `/bk-task` | `/bk-capture task` |
+| `/bk-task --source email` | `/bk-capture task --source email` |
+| `/bk-task --source chat` | `/bk-capture task --source chat` |
+| `/bk-task --source minutes` | `/bk-capture task --source minutes` |
+
+## Why Deprecated?
+
+bk-task has been merged into bk-capture for a unified capture experience. All functionality is preserved in the new skill.
+
 ---
 
 # bk-task - Create Task from Unstructured Input

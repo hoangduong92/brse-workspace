@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(excel-diagram-skill-updated)",
+      "Bash(python:*)",
+      "Bash(ls:*)",
+      "Bash(dir:*)",
+      "Bash(cp:*)",
+      "Skill(excel-diagram-generator)",
+      "Bash(Get-Date -UFormat \"%y%m%d\")",
+      "Bash(mkdir:*)"
+    ]
+  }
+}

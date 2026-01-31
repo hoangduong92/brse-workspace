@@ -1,0 +1,1597 @@
+{
+  "要件定義書": {
+    "total_shapes": 61,
+    "shapes": [
+      {
+        "index": 1,
+        "name": "Shape 3",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 313.5,
+          "top": 913.5,
+          "width": 54.75,
+          "height": 34.5
+        },
+        "text": "",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 2,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 192.75,
+          "top": 843.0,
+          "width": 36.0,
+          "height": 81.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 3,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 368.25,
+          "top": 922.5,
+          "width": 31.5,
+          "height": 3.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 4,
+        "name": "Shape 5",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 138.0,
+          "top": 825.75,
+          "width": 54.75,
+          "height": 35.25
+        },
+        "text": "RPA実行\n（WMC）",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 5,
+        "name": "Shape 8",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 138.0,
+          "top": 1056.75,
+          "width": 54.0,
+          "height": 37.5
+        },
+        "text": "",
+        "font": {
+          "name": "Arial",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 6,
+        "name": "Shape 9",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 123.0,
+          "top": 1062.0,
+          "width": 78.0,
+          "height": 36.75
+        },
+        "text": "WinActor \nManager on Cloud",
+        "font": {
+          "name": "",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 7,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 163.5,
+          "top": 861.0,
+          "width": 3.0,
+          "height": 196.5
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 2,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 8,
+        "name": "Shape 11",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 307.5,
+          "top": 913.5,
+          "width": 65.25,
+          "height": 33.75
+        },
+        "text": "不備チェック",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 9,
+        "name": "Shape 12",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 486.0,
+          "top": 913.5,
+          "width": 55.5,
+          "height": 33.75
+        },
+        "text": "",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 10,
+        "name": "Shape 13",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 484.5,
+          "top": 913.5,
+          "width": 60.0,
+          "height": 35.25
+        },
+        "text": "確認依頼メールを作成",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 11,
+        "name": "Shape 6",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 227.25,
+          "top": 913.5,
+          "width": 54.75,
+          "height": 33.75
+        },
+        "text": "",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 12,
+        "name": "Shape 14",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 222.0,
+          "top": 913.5,
+          "width": 66.0,
+          "height": 37.5
+        },
+        "text": "対象ファイル開く",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 13,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 282.0,
+          "top": 922.5,
+          "width": 32.25,
+          "height": 3.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 14,
+        "name": "Shape 16",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 21.75,
+          "top": 2325.0,
+          "width": 142.5,
+          "height": 24.0
+        },
+        "text": "１．端末ID管理レコード",
+        "font": {
+          "name": "Arial",
+          "size": 9.0,
+          "bold": true,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 15,
+        "name": "Shape 6",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 399.75,
+          "top": 913.5,
+          "width": 54.75,
+          "height": 33.75
+        },
+        "text": "",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 16,
+        "name": "Shape 17",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 393.0,
+          "top": 913.5,
+          "width": 66.0,
+          "height": 38.25
+        },
+        "text": "確認結果記載",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 17,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 456.0,
+          "top": 922.5,
+          "width": 31.5,
+          "height": 3.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 18,
+        "name": "Shape 19",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 574.5,
+          "top": 913.5,
+          "width": 55.5,
+          "height": 33.75
+        },
+        "text": "",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 19,
+        "name": "Shape 20",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 565.5,
+          "top": 913.5,
+          "width": 66.0,
+          "height": 33.0
+        },
+        "text": "報告メール\n送信",
+        "font": {
+          "name": "",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 20,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 542.25,
+          "top": 923.25,
+          "width": 31.5,
+          "height": 3.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 21,
+        "name": "Shape 21",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 21.75,
+          "top": 2489.25,
+          "width": 142.5,
+          "height": 24.0
+        },
+        "text": "２．テーブルリンク情報",
+        "font": {
+          "name": "Arial",
+          "size": 9.0,
+          "bold": true,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 22,
+        "name": "Shape 22",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 750.75,
+          "top": 729.0,
+          "width": 93.0,
+          "height": 33.75
+        },
+        "text": "繰り返し",
+        "font": {
+          "name": "Calibri",
+          "size": 11.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#4472C4",
+        "line_weight": 2.25,
+        "line_style": 4,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 23,
+        "name": "Shape 23",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 217.5,
+          "top": 873.75,
+          "width": 337.5,
+          "height": 173.25
+        },
+        "text": "",
+        "font": {
+          "name": "Calibri",
+          "size": 11.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#4472C4",
+        "line_weight": 2.25,
+        "line_style": 4,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 24,
+        "name": "Shape 24",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 136.5,
+          "top": 522.75,
+          "width": 55.5,
+          "height": 35.25
+        },
+        "text": "メールで受領",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 25,
+        "name": "Shape 25",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 252.0,
+          "top": 521.25,
+          "width": 52.5,
+          "height": 38.25
+        },
+        "text": "添付ファイルをマージ",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 26,
+        "name": "Shape 26",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 751.5,
+          "top": 441.0,
+          "width": 93.75,
+          "height": 26.25
+        },
+        "text": "RPAスコープ",
+        "font": {
+          "name": "Calibri",
+          "size": 11.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FF0000",
+        "line_weight": 2.25,
+        "line_style": 4,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 27,
+        "name": "Shape 27",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 366.75,
+          "top": 523.5,
+          "width": 52.5,
+          "height": 34.5
+        },
+        "text": "不備がないかをチェック",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 28,
+        "name": "Shape 28",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 538.5,
+          "top": 483.0,
+          "width": 90.0,
+          "height": 35.25
+        },
+        "text": "不備ありのファイル作成",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 29,
+        "name": "Shape 29",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 456.75,
+          "top": 513.75,
+          "width": 69.75,
+          "height": 55.5
+        },
+        "text": "",
+        "font": {
+          "name": "Arial",
+          "size": 6.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4131,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 30,
+        "name": "Shape 30",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 462.75,
+          "top": 526.5,
+          "width": 64.5,
+          "height": 27.75
+        },
+        "text": "不備あり？\n",
+        "font": {
+          "name": "",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4131,
+          "vertical": -4160
+        }
+      },
+      {
+        "index": 31,
+        "name": "Shape 31",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 504.75,
+          "top": 479.25,
+          "width": 36.75,
+          "height": 28.5
+        },
+        "text": "あり\n",
+        "font": {
+          "name": "",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4131,
+          "vertical": -4160
+        }
+      },
+      {
+        "index": 32,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 192.0,
+          "top": 539.25,
+          "width": 60.0,
+          "height": 3.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 33,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 304.5,
+          "top": 539.25,
+          "width": 62.25,
+          "height": 3.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 34,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 418.5,
+          "top": 539.25,
+          "width": 38.25,
+          "height": 3.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 35,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 492.75,
+          "top": 500.25,
+          "width": 45.75,
+          "height": 14.25
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 36,
+        "name": "Shape 36",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 555.75,
+          "top": 555.0,
+          "width": 87.75,
+          "height": 34.5
+        },
+        "text": "取り込み用のファイル作成",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 37,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 492.75,
+          "top": 567.75,
+          "width": 64.5,
+          "height": 5.25
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 38,
+        "name": "Shape 38",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 504.0,
+          "top": 549.0,
+          "width": 36.75,
+          "height": 28.5
+        },
+        "text": "なし",
+        "font": {
+          "name": "Calibri",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2,
+        "alignment": {
+          "horizontal": -4131,
+          "vertical": -4160
+        }
+      },
+      {
+        "index": 39,
+        "name": "Shape 39",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 677.25,
+          "top": 482.25,
+          "width": 73.5,
+          "height": 34.5
+        },
+        "text": "カード会社にメールで不備連絡",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 40,
+        "name": "Shape 40",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 675.75,
+          "top": 555.0,
+          "width": 71.25,
+          "height": 34.5
+        },
+        "text": "取り込み作業を\u000b進める",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 41,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 628.5,
+          "top": 498.75,
+          "width": 49.5,
+          "height": 3.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 42,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 643.5,
+          "top": 570.75,
+          "width": 33.0,
+          "height": 3.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 43,
+        "name": "Shape 43",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 335.25,
+          "top": 456.0,
+          "width": 321.0,
+          "height": 157.5
+        },
+        "text": "",
+        "font": {
+          "name": "Calibri",
+          "size": 11.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#FF0000",
+        "line_weight": 2.25,
+        "line_style": 4,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 44,
+        "name": "Shape 44",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 137.25,
+          "top": 643.5,
+          "width": 54.75,
+          "height": 39.0
+        },
+        "text": "Outlook",
+        "font": {
+          "name": "Arial",
+          "size": 10.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 45,
+        "name": "Shape 45",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 237.75,
+          "top": 663.75,
+          "width": 85.5,
+          "height": 42.75
+        },
+        "text": "9.テーブルリンク情報_yyyymmddDLL{他の文字列}",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 46,
+        "name": "Shape 46",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 500.25,
+          "top": 642.0,
+          "width": 99.0,
+          "height": 48.0
+        },
+        "text": "KID_106_8.端末ID管理レコード_20251015{他の文字列}.xlsx",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 47,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 163.5,
+          "top": 558.0,
+          "width": 3.0,
+          "height": 85.5
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 4,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 48,
+        "name": "Shape 48",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 237.75,
+          "top": 619.5,
+          "width": 85.5,
+          "height": 43.5
+        },
+        "text": "8.端末ID管理レコード_yyyymmddDLL{他の文字列}",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 49,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 278.25,
+          "top": 559.5,
+          "width": 3.0,
+          "height": 60.75
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 4,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 50,
+        "name": "Shape 50",
+        "type": 1,
+        "type_name": "Rectangle",
+        "position": {
+          "left": 602.25,
+          "top": 649.5,
+          "width": 97.5,
+          "height": 61.5
+        },
+        "text": "8.端末ID管理レコード_yyyymmdd{他の文字列}.xlsx",
+        "font": {
+          "name": "Arial",
+          "size": 8.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#A9DCDE",
+        "line_color": "#4472C4",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4108,
+          "vertical": -4108
+        }
+      },
+      {
+        "index": 51,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 542.25,
+          "top": 521.25,
+          "width": 3.0,
+          "height": 120.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 4,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 52,
+        "name": "Shape 2",
+        "type": 6,
+        "type_name": "Type_6",
+        "position": {
+          "left": 629.25,
+          "top": 590.25,
+          "width": 3.0,
+          "height": 60.75
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#000000",
+        "line_color": "#000000",
+        "line_weight": 0.75,
+        "line_style": 4,
+        "arrow_end": 2,
+        "arrow_begin": 1
+      },
+      {
+        "index": 53,
+        "name": "Shape 53",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 130.5,
+          "top": 1834.5,
+          "width": 74.25,
+          "height": 28.5
+        },
+        "text": "■複数日付",
+        "font": {
+          "name": "Calibri",
+          "size": 11.0,
+          "bold": false,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#BABABA",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4131,
+          "vertical": -4160
+        }
+      },
+      {
+        "index": 54,
+        "name": "Shape 54",
+        "type": 17,
+        "type_name": "Type_17",
+        "position": {
+          "left": 481.5,
+          "top": 1835.2501220703125,
+          "width": 76.5,
+          "height": 28.5
+        },
+        "text": "■同一日付",
+        "font": {
+          "name": "Calibri",
+          "size": 11.0,
+          "bold": true,
+          "italic": false,
+          "color": "#000000"
+        },
+        "fill_color": "#FFFFFF",
+        "line_color": "#BABABA",
+        "line_weight": 0.75,
+        "line_style": 1,
+        "arrow_end": 1,
+        "arrow_begin": 1,
+        "alignment": {
+          "horizontal": -4131,
+          "vertical": -4160
+        }
+      },
+      {
+        "index": 55,
+        "name": "image4.png",
+        "type": 13,
+        "type_name": "Connector",
+        "position": {
+          "left": 87.75,
+          "top": 2351.25,
+          "width": 519.75,
+          "height": 110.25
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2
+      },
+      {
+        "index": 56,
+        "name": "image2.png",
+        "type": 13,
+        "type_name": "Connector",
+        "position": {
+          "left": 90.75,
+          "top": 2517.75,
+          "width": 526.5,
+          "height": 114.75
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2
+      },
+      {
+        "index": 57,
+        "name": "image6.png",
+        "type": 13,
+        "type_name": "Connector",
+        "position": {
+          "left": 130.5,
+          "top": 1475.2501220703125,
+          "width": 315.75,
+          "height": 177.75
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2
+      },
+      {
+        "index": 58,
+        "name": "image7.png",
+        "type": 13,
+        "type_name": "Connector",
+        "position": {
+          "left": 483.0,
+          "top": 1869.7498779296875,
+          "width": 295.5,
+          "height": 236.25
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2
+      },
+      {
+        "index": 59,
+        "name": "image5.png",
+        "type": 13,
+        "type_name": "Connector",
+        "position": {
+          "left": 130.5,
+          "top": 1867.5,
+          "width": 300.75,
+          "height": 240.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2
+      },
+      {
+        "index": 60,
+        "name": "image3.png",
+        "type": 13,
+        "type_name": "Connector",
+        "position": {
+          "left": 130.5,
+          "top": 4782.0,
+          "width": 198.75,
+          "height": 181.5
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2
+      },
+      {
+        "index": 61,
+        "name": "image1.png",
+        "type": 13,
+        "type_name": "Connector",
+        "position": {
+          "left": 133.5,
+          "top": 5919.75,
+          "width": 269.25,
+          "height": 159.0
+        },
+        "text": null,
+        "font": {},
+        "fill_color": "#FFFFFF",
+        "line_color": "#FFFFFF",
+        "line_weight": -2147483648.0,
+        "line_style": -2,
+        "arrow_end": -2,
+        "arrow_begin": -2
+      }
+    ]
+  }
+}

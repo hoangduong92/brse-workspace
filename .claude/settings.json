@@ -56,6 +56,16 @@
             "command": "node \"%CLAUDE_PROJECT_DIR%\"/.claude/hooks/privacy-block.cjs"
           }
         ]
+      },
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"%CLAUDE_PROJECT_DIR%\"/.claude/hooks/descriptive-name.cjs",
+            "_origin": "engineer"
+          }
+        ]
       }
     ],
     "PostToolUse": [
@@ -74,6 +84,28 @@
           {
             "type": "command",
             "command": "node \"%CLAUDE_PROJECT_DIR%\"/.claude/hooks/usage-context-awareness.cjs"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"%CLAUDE_PROJECT_DIR%\"/.claude/hooks/stop-memory-autosave.cjs",
+            "timeout": 10
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"%CLAUDE_PROJECT_DIR%\"/.claude/hooks/session-end-memory-archive.cjs",
+            "timeout": 30
           }
         ]
       }

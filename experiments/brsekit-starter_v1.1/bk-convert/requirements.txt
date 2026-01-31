@@ -1,0 +1,11 @@
+# Core dependencies (text translation uses built-in modules)
+
+# Shared dependencies for document translation
+openai>=1.0.0
+python-dotenv>=1.0.0
+
+# Excel translation (requires Excel installation on Windows/macOS)
+xlwings>=0.30.0
+
+# PowerPoint translation (cross-platform, no PowerPoint needed)
+python-pptx>=0.6.23

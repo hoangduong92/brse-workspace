@@ -1,0 +1,15 @@
+# Môi trường
+.env
+
+# Thư mục ngẫu nhiên
+__pycache__/
+*.py[cod]
+*$py.class
+
+
+# Logs
+*.log 
+
+# input, output files
+input/
+output/

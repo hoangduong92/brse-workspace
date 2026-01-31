@@ -1,11 +1,30 @@
 ---
 name: bk-status
-description: Check project progress - identify late tasks, overloaded members, health summary. Outputs Markdown report to ./project-status/
+description: "[DEPRECATED] Use /bk-track status instead. Check project progress."
+deprecated: true
+redirect: bk-track status
 license: MIT
 allowed-tools:
   - Bash
   - Read
   - Write
+---
+
+> ⚠️ **DEPRECATED**: This skill is deprecated. Use `/bk-track status` instead.
+
+## Migration Guide
+
+| Old Command | New Command |
+|------------|-------------|
+| `/bk-status` | `/bk-track status` |
+| `/bk-status --threshold 5` | `/bk-track status --threshold 5` |
+| `/bk-status --capacity 6` | `/bk-track status --capacity 6` |
+| `/bk-status --lang vi` | `/bk-track status --lang vi` |
+
+## Why Deprecated?
+
+bk-status has been merged into bk-track for a unified project tracking experience. All functionality is preserved in the new skill.
+
 ---
 
 # bk-status - Project Status Check

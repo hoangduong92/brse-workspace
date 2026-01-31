@@ -1,3 +1,27 @@
+---
+name: bk-report
+description: "[DEPRECATED] Use /bk-track report instead. Weekly report generation."
+deprecated: true
+redirect: bk-track report
+---
+
+> ⚠️ **DEPRECATED**: This skill is deprecated. Use `/bk-track report` instead.
+
+## Migration Guide
+
+| Old Command | New Command |
+|------------|-------------|
+| `/bk-report` | `/bk-track report` |
+| `/bk-report --lang=ja` | `/bk-track report --lang=ja` |
+| `/bk-report --lang=vi` | `/bk-track report --lang=vi` |
+| `/bk-report --period=2026-01-20:2026-01-26` | `/bk-track report --period=2026-01-20:2026-01-26` |
+
+## Why Deprecated?
+
+bk-report has been merged into bk-track for a unified project tracking experience. All functionality is preserved in the new skill.
+
+---
+
 # bk-report - Weekly Report Generator
 
 Generate weekly progress reports from Backlog project data.

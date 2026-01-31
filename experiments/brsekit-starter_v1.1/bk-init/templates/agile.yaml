@@ -1,0 +1,49 @@
+# Agile Methodology PM Template
+# Focus: Sprint goals, Quality metrics, Velocity tracking
+
+focus_areas:
+  primary:
+    - sprint_goal_alignment
+    - quality_metrics
+    - velocity_tracking
+  secondary:
+    - team_capacity
+    - technical_debt
+
+warning_triggers:
+  high:
+    - "sprint goal at risk"
+    - "velocity drop"
+    - "blocker"
+    - "impediment"
+  medium:
+    - "dependency"
+    - "clarification"
+    - "tech debt"
+
+pm_checklist:
+  daily:
+    - "Check blockers/impediments"
+    - "Monitor sprint progress"
+    - "Track team capacity"
+  weekly:
+    - "Review velocity trends"
+    - "Assess quality metrics"
+    - "Update backlog priorities"
+  sprint_planning:
+    - "Define sprint goal"
+    - "Estimate story points"
+    - "Verify team capacity"
+    - "Identify dependencies"
+  sprint_review:
+    - "Demo completed work"
+    - "Collect customer feedback"
+    - "Update product backlog"
+  retrospective:
+    - "Identify improvements"
+    - "Action items from last retro"
+    - "Celebrate wins"
+
+communication_style: "collaborative"
+reporting_frequency: "daily"
+escalation_threshold: "sprint goal jeopardized"

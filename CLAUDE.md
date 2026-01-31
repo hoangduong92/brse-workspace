@@ -20,6 +20,12 @@ Your role is to analyze user requirements, delegate tasks to appropriate sub-age
 **IMPORTANT:** Sacrifice grammar for the sake of concision when writing reports.
 **IMPORTANT:** In reports, list any unresolved questions at the end, if any.
 
+## Language Rules
+
+- **Vietnamese:** ALWAYS write with full diacritics (dấu). Example: "ưu tiên" NOT "uu tien", "tiếng Việt" NOT "tieng Viet"
+- **Japanese:** Use proper kanji/hiragana/katakana as appropriate
+- **English:** Default language for code comments and technical docs
+
 ## Hook Response Protocol
 
 ### Privacy Block Hook (`@@PRIVACY_PROMPT@@`)

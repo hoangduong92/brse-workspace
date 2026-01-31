@@ -4,6 +4,7 @@
 
 # JS/TS
 node_modules
+!**/brsekit-cli/dist
 dist
 build
 .next

@@ -70,6 +70,78 @@ projects/HB21373/
 /bk-write "email content"    # Japanese business writing
 ```
 
+## Hooks
+
+BrseKit hooks inject project context automatically at session start.
+
+### Session Start Hook
+- Scans `projects/` directory on startup
+- **1 project**: Auto-selected, no `--project` needed
+- **2+ projects**: Shows list with warning to use `--project`
+- **0 projects**: Warning + `/bk-init` hint
+- Shows env var status (✓/✗) for API keys
+
+### Subagent Hook
+- Injects minimal context for spawned agents (~40 tokens)
+- Provides `vault` path and `glossary` path for project
+- Helps agents access project resources without re-scanning
+
+### --project Behavior
+
+| Scenario | Behavior |
+|----------|----------|
+| 1 project | Auto-selected, `--project` optional |
+| 2+ projects | `--project` required |
+| 0 projects | Error, run `/bk-init` |
+
+## Configuration
+
+### Config File (`.claude/.bk.json`)
+
+BrseKit supports cascading config: `~/.claude/.bk.json` (global) → `.claude/.bk.json` (local).
+
+```json
+{
+  "brseLevel": 1,
+  "hooks": {
+    "session-init": true,
+    "subagent-init": true
+  },
+  "defaults": {
+    "project": "HB21373",
+    "language": "vi"
+  }
+}
+```
+
+### brseLevel System
+
+Controls output verbosity and guidance level. **Skills MUST respect `BK_BRSE_LEVEL` env var.**
+
+| Level | Name | Verbosity | Guidance |
+|-------|------|-----------|----------|
+| -1 | Disabled | No injection | No guidelines (default) |
+| 0 | Intern | Very detailed | Step-by-step instructions |
+| 1 | Junior | Detailed | Tips + warnings |
+| 2 | Mid | Balanced | When relevant |
+| 3 | Senior | Concise | Minimal |
+| 4 | Lead | Raw/compact | None |
+
+**Default:** `-1` (disabled) - brseLevel not injected, saves tokens.
+
+**Opt-in:** Set `"brseLevel": 1` in `.bk.json` to enable.
+
+### Environment Variables
+
+BrseKit hooks write these env vars to `CLAUDE_ENV_FILE`:
+
+| Var | Purpose | Example |
+|-----|---------|---------|
+| `BK_BRSE_LEVEL` | Output verbosity | `1` |
+| `BK_ACTIVE_PROJECT` | Current project | `HB21373` |
+| `BK_VAULT_PATH` | Project vault | `projects/HB21373/vault/` |
+| `BK_GLOSSARY_PATH` | Project glossary | `projects/HB21373/glossary.json` |
+
 ## Multi-Project Architecture
 
 ### Core Principle

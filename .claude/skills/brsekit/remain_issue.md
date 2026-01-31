@@ -9,3 +9,7 @@
 - thêm skill backlog init : dựa vào thông tin về dự án, đề xuất cấu hình backlog : category, issue type, document..
 - Thêm phần bk-docs để ghi lại document về dự án không ? hay dùng bk-write —backlog, —gg sheet..
 - triển khai công ty ntn ?
+
+3. 2026/01/31 20:41
+
+- tạo venv trong skill để chạy chung script ở lần đầu chạy python script

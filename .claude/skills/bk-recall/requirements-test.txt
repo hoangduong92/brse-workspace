@@ -1,0 +1,16 @@
+# Test dependencies for bk-recall Phase 1 unit tests
+
+# Core testing framework
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-timeout==2.2.0
+pytest-mock==3.12.0
+
+# Mocking and test utilities
+unittest-mock-extended==0.2.0
+
+# Code coverage
+coverage==7.3.2
+
+# Type checking (optional but recommended)
+pytest-types==0.2.0

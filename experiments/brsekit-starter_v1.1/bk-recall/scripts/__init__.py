@@ -1,1 +1,0 @@
-"""bk-recall scripts package."""

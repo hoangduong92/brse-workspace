@@ -1,3 +1,0 @@
-# bk-write dependencies
-# No additional dependencies - uses Python standard library only
-# pytest for testing (already in shared venv)

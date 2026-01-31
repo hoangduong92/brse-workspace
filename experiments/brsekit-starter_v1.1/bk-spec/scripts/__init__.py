@@ -1,1 +1,0 @@
-"""bk-spec scripts package."""

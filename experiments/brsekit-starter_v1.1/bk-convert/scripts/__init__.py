@@ -1,1 +1,0 @@
-"""BK-Translate: Japanese-Vietnamese translation skill."""
